@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 function CreatOrderButton() {
   return (
     <>
-      <Button href="#">Tạo Đơn Hàng</Button>
+      <Button href="../pages/OrderPage">Tạo Đơn Hàng</Button>
     </>
   );
 }

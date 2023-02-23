@@ -3,8 +3,9 @@ import './App.css';
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import CreateOrderButton from './components/create-order-button';
+import CreateOrderButton from './components/CreateOrderButton';
 import SearchBox from './components/search-box';
+import ProductList from './components/ProductList';
 
 
 
@@ -33,6 +34,7 @@ function App() {
             </div>
             {/* /End replace */}
           </div>
+          <ProductList/>
         </main>
 
       </div>
