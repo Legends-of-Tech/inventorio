@@ -1,9 +1,13 @@
 import Button from 'react-bootstrap/Button';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function CreatOrderButton() {
   return (
     <>
-      <Button href="../pages/OrderPage">Tạo Đơn Hàng</Button>
+      {/* <Link to="/product-lists"> */}
+        <Button href="product-lists">Tạo Đơn Hàng</Button>
+    
     </>
   );
 }
