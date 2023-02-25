@@ -15,12 +15,39 @@
 const products = [
     {
       id: 1,
-      name: 'Basic Tee',
+      name: 'Áo Dài #1',
       href: '#',
       imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
       imageAlt: "Front of men's Basic Tee in black.",
       price: '$35',
-      color: 'Black',
+      color: 'Trắng',
+    },
+    {
+      id: 2,
+      name: 'Áo Dài #2',
+      href: '#',
+      imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
+      imageAlt: "Front of men's Basic Tee in black.",
+      price: '$35',
+      color: 'Vàng',
+    },
+    {
+      id: 3,
+      name: 'Áo Dài #3',
+      href: '#',
+      imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
+      imageAlt: "Front of men's Basic Tee in black.",
+      price: '$35',
+      color: 'Xanh',
+    },
+    {
+      id: 4,
+      name: 'Áo Dài #4',
+      href: '#',
+      imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
+      imageAlt: "Front of men's Basic Tee in black.",
+      price: '$35',
+      color: 'Đỏ',
     },
     // More products...
   ]
