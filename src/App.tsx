@@ -12,8 +12,9 @@ function App() {
         <Route path='/' element={<WelcomePage/>}/>
           <Route path='/product-lists' element={<OrderPage/>}/>
         </Routes>
-      </BrowserRouter>
         <NavBar className="absolute inset-x-0 bottom-0 h-16 right-0 vw-100"/>
+
+      </BrowserRouter>
     </div>
   )
 }

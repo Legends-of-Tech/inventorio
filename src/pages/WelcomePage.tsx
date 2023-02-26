@@ -5,6 +5,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import CreateOrderButton from '../components/CreateOrderButton'
 import SearchBox from '../components/search-box';
 import ProductList from '../components/ProductList';
+import NavBar from '../components/NavBar/NavBar';
 
 
 
@@ -34,7 +35,6 @@ function WelcomePage() {
             {/* /End replace */}
           </div>
         </main>
-
       </div>
     </>
   )

@@ -6,7 +6,7 @@ function CreatOrderButton() {
   return (
     <>
       {/* <Link to="/product-lists"> */}
-        <Button href="product-lists">Tạo Đơn Hàng</Button>
+        <Button className="grid place-items-center mr-1" href="product-lists">Tạo Đơn Hàng</Button>
     
     </>
   );
