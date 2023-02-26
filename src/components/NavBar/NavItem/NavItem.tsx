@@ -14,7 +14,7 @@ const NavItem = ({icon, size,path}: Props) => {
     const navigate = useNavigate();
 
   return (
-    <div className="col-4 bg-blue-300 grid place-items-center" onClick={() => { navigate(path)}}>
+    <div className=" col-4 grid place-items-center bg-blue-300" onClick={() => { navigate(path)}}>
         <FontAwesomeIcon className='mr-1'icon={icon} size={size}/>
     </div>
   )

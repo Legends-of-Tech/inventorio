@@ -7,7 +7,7 @@ import ProductList from '../components/ProductList';
 import NavBar from '../components/NavBar/NavBar';
 import NavItem from '../components/NavBar/NavItem/NavItem';
 import { faPlus} from '@fortawesome/free-solid-svg-icons';
-
+import Button from 'react-bootstrap/Button';
 
 
 function classNames(...classes: any[]) {
@@ -18,20 +18,24 @@ function WelcomePage() {
   return (
     <>
       <div className="min-h-full">
-        <header className="bg-white shadow">
-          <div className="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900">Trang Chủ</h1>
-          </div>
+        <header >
+          <div className="mx-auto max-w-7xl py-10 px-8 sm:px-6 lg:px-8"></div>
         </header>
         <main>
         <SearchBox/>
           <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
             {/* Replace with your content */}
             <div className="px-4 py-6 sm:px-0">
-              <div className="h-96 rounded-lg border-4 border-dashed border-gray-400">
-                <NavItem icon={faPlus} size="4x"path="/"/>
+              {/* <div className="h-96 rounded-lg border-4 border-dashed border-gray-400">
+                <div className='flex justify-center'>
+                  <NavItem icon={faPlus} size="4x"path="/product-lists"/>
+                </div>
+              </div> */}
+              <div className="flex justify-center">
+                <NavItem icon={faPlus} size="6x"path="/product-lists"/>
               </div>
-              
+              <br></br>
+              <Button className="flex justify-center" href="/product-lists" variant="primary">Tạo Đơn Hàng</Button>
             </div>
             {/* /End replace */}
           </div>
