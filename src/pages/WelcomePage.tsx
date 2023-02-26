@@ -2,10 +2,11 @@ import '../App.css';
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import CreateOrderButton from '../components/CreateOrderButton'
 import SearchBox from '../components/search-box';
 import ProductList from '../components/ProductList';
 import NavBar from '../components/NavBar/NavBar';
+import NavItem from '../components/NavBar/NavItem/NavItem';
+import { faPlus} from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -28,7 +29,7 @@ function WelcomePage() {
             {/* Replace with your content */}
             <div className="px-4 py-6 sm:px-0">
               <div className="h-96 rounded-lg border-4 border-dashed border-gray-400">
-                <CreateOrderButton/>
+                <NavItem icon={faPlus} size="4x"path="/"/>
               </div>
               
             </div>
