@@ -7,7 +7,9 @@ import ProductList from '../components/ProductList';
 import NavBar from '../components/NavBar/NavBar';
 import NavItem from '../components/NavBar/NavItem/NavItem';
 import { faPlus} from '@fortawesome/free-solid-svg-icons';
-import Button from 'react-bootstrap/Button';
+import Fab from '@mui/material/Fab';
+import AddIcon from '@mui/icons-material/Add';
+import { Link } from 'react-router-dom';
 
 
 function classNames(...classes: any[]) {
@@ -26,16 +28,28 @@ function WelcomePage() {
           <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
             {/* Replace with your content */}
             <div className="px-4 py-6 sm:px-0">
-              {/* <div className="h-96 rounded-lg border-4 border-dashed border-gray-400">
-                <div className='flex justify-center'>
-                  <NavItem icon={faPlus} size="4x"path="/product-lists"/>
-                </div>
-              </div> */}
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
               <div className="flex justify-center">
-                <NavItem icon={faPlus} size="6x"path="/product-lists"/>
+                {/* <Fab href="product-lists" size="large" color="primary" aria-label="add">
+                  <AddIcon />
+                </Fab> */}
+                <Link to="/product-lists">
+                  <Fab variant="extended" size="large" color="primary" aria-label="add">
+                    <AddIcon sx={{ mr: 1 }} />
+                    Tạo Đơn Hàng
+                  </Fab>
+                </Link>
               </div>
-              <br></br>
-              <Button className="flex justify-center" href="/product-lists" variant="primary">Tạo Đơn Hàng</Button>
+              
+              
+
             </div>
             {/* /End replace */}
           </div>
