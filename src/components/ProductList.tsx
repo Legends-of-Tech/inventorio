@@ -17,27 +17,27 @@ const products = [
       id: 1,
       name: 'Áo Dài #1',
       href: '#',
-      imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
+      imageSrc: 'https://scontent.fmel14-1.fna.fbcdn.net/v/t1.15752-9/333660729_1432892293912327_5764577130869122753_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=ae9488&_nc_ohc=t4s6oDJgrh0AX_IacDp&_nc_ht=scontent.fmel14-1.fna&oh=03_AdRs0ZBI-nLMbi_gG7Jz6LYLjIKS3uUhRYMFwg8w6vCwSg&oe=64226D09',
       imageAlt: "Front of men's Basic Tee in black.",
-      price: '$35',
+      price: '100,000đ',
       color: 'Trắng',
     },
     {
       id: 2,
       name: 'Áo Dài #2',
       href: '#',
-      imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
+      imageSrc: 'https://scontent.fmel14-1.fna.fbcdn.net/v/t1.15752-9/333852215_1275025989760489_3022209221594412241_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=ae9488&_nc_ohc=YbW9X6XmWCAAX_G0hn2&_nc_ht=scontent.fmel14-1.fna&oh=03_AdRg7pLAbltPiXrdqsDZMr2uv_GAjkBKbzdkMRDD3_Etcw&oe=6422E69F',
       imageAlt: "Front of men's Basic Tee in black.",
-      price: '$35',
+      price: '100,000đ',
       color: 'Vàng',
     },
     {
       id: 3,
       name: 'Áo Dài #3',
       href: '#',
-      imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
+      imageSrc: 'https://scontent.fmel14-1.fna.fbcdn.net/v/t1.15752-9/333753158_5731716583593852_8460558774222528638_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=ae9488&_nc_ohc=URCqGNy8xN4AX_LjEk4&tn=r05_dnK99Qp4-iPg&_nc_ht=scontent.fmel14-1.fna&oh=03_AdSvDONLLS2Ve_tIvawg-0rmwGguqKNCm7oWQLJr3B8g4w&oe=64226628',
       imageAlt: "Front of men's Basic Tee in black.",
-      price: '$35',
+      price: '100,000đ',
       color: 'Xanh',
     },
     {
@@ -46,7 +46,7 @@ const products = [
       href: '#',
       imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
       imageAlt: "Front of men's Basic Tee in black.",
-      price: '$35',
+      price: '100,000đ',
       color: 'Đỏ',
     },
     // More products...
@@ -70,7 +70,7 @@ const products = [
                 </div>
                 <div className="mt-4 flex justify-between">
                   <div>
-                    <h3 className="text-sm text-gray-700">
+                    <h3 className="text-lg text-gray-700">
                       <a href={product.href}>
                         <span aria-hidden="true" className="absolute inset-0" />
                         {product.name}
