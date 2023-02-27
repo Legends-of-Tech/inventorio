@@ -6,10 +6,8 @@ import SearchBox from '../components/search-box';
 import ProductList from '../components/ProductList';
 import NavBar from '../components/NavBar/NavBar';
 import NavItem from '../components/NavBar/NavItem/NavItem';
-import { faPlus} from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
-import { Fab } from '@mui/material';
-import AddIcon from '@mui/icons-material/Add';
+import CreOrdBut from '../components/CreOrdBut';
+
 
 
 function classNames(...classes: any[]) {
@@ -26,16 +24,10 @@ function WelcomePage() {
         <main>
         <SearchBox/>
           <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-            <div className="px-4 py-6 sm:px-0">
-            <div className="flex justify-center">
-              <Link to="/product-lists">
-                <Fab variant="extended" size="large" color="primary" aria-label="add">
-                  <AddIcon sx={{ mr: 1 }} />
-                  Tạo Đơn Hàng
-                </Fab>
-              </Link>
-              </div>
+            <div className="px-38 py-40 sm:px-0">
+              <CreOrdBut/>
             </div>
+            
           </div>
         </main>
       </div>
