@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import NavBar from '../components/NavBar/NavBar';
-import ProductList from "../components/ProductList"
+import ProductList from "../components/Products/ProductList"
 import SearchBox from '../components/search-box';
 
 

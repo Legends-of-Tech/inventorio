@@ -43,11 +43,13 @@ const CreOrdBut = () => {
   return (
     <>
         <div className="flex justify-center">
+          <Link to='all-products'>
             <Fab variant="extended" size="large" color="primary" aria-label="add" onClick={handleClick}>
                 <AddIcon sx={{ mr: 1 }} />
                 Tạo Đơn Hàng
                 {open ? <ExpandLess /> : <ExpandMore />}
             </Fab>
+          </Link>
         </div>
         <div>
         <Collapse in={open} timeout="auto" unmountOnExit>
@@ -58,29 +60,23 @@ const CreOrdBut = () => {
             components: {
                 MuiListItemButton: {
                 defaultProps: {
-                    disableTouchRipple: true,
-                },
-                },
-            },
+                    disableTouchRipple: true,},},},
             palette: {
-                mode: 'dark',
-                primary: { main: 'rgb(102, 157, 246)' },
-                background: { paper: 'rgb(5, 30, 52)' },
-            },
-            })}
-        >
+              mode: 'dark',
+              primary: { main: 'rgb(102, 157, 246)' },
+              background: { paper: 'rgb(5, 30, 52)' },
+            },})}>
         <Paper elevation={0} sx={{ maxWidth: 256 }}>
             <Box
               sx={{
-                bgcolor: open ? 'rgba(71, 98, 130, 0.2)' : null,
+                bgcolor: open ? '#1976D2' : null,
                 pb: open ? 2 : 0,
-              }}
-            >
+              }}>
               {open &&
                 data.map((item) => (
                   <ListItemButton
                     key={item.label}
-                    sx={{ py: 0, minHeight: 32, color: 'rgba(255,255,255,.8)' }}>
+                    sx={{ py: 0, minHeight: 32, color: '#FFFFFF' }}>
                     <ListItemText
                       primary={item.label}
                       primaryTypographyProps={{ fontSize: 14, fontWeight: 'medium' }}

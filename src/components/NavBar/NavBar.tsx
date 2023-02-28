@@ -11,8 +11,8 @@ type Props = {
 const NavBar = ({className}: Props) => (
   <div className={`${className} d-flex`}>
     <NavItem icon={faHouse} size="2x" path="/"/>
-    <NavItem icon={faBoxArchive} size="2x" path="/"/>
-    <NavItem icon={faUser} size="2x"path="/"/>
+    <NavItem icon={faBoxArchive} size="2x" path="/all-products"/>
+    <NavItem icon={faUser} size="2x"path="/customers-profile"/>
   </div>
 )
 
