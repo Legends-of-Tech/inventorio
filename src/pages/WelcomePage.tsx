@@ -3,7 +3,7 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import SearchBox from '../components/search-box';
-import ProductList from '../components/Products/ProductList';
+import ProductList from '../components/Products/AllProducts';
 import NavBar from '../components/NavBar/NavBar';
 import NavItem from '../components/NavBar/NavItem/NavItem';
 import CreOrdBut from '../components/CreOrdBut';

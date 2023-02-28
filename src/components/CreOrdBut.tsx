@@ -47,11 +47,11 @@ const CreOrdBut = () => {
             <Fab variant="extended" size="large" color="primary" aria-label="add" onClick={handleClick}>
                 <AddIcon sx={{ mr: 1 }} />
                 Tạo Đơn Hàng
-                {open ? <ExpandLess /> : <ExpandMore />}
+                {/* {open ? <ExpandLess /> : <ExpandMore />} */}
             </Fab>
           </Link>
         </div>
-        <div>
+        {/* <div>
         <Collapse in={open} timeout="auto" unmountOnExit>
         <div className="flex justify-center"> 
         <Box sx={{ display: 'flex' }}>
@@ -89,7 +89,7 @@ const CreOrdBut = () => {
     </Box>
         </div>
             </Collapse>
-        </div>
+        </div> */}
 
     </>
   )

@@ -1,7 +1,10 @@
 import { Outlet } from 'react-router-dom';
 import NavBar from '../components/NavBar/NavBar';
-import ProductList from "../components/Products/ProductList"
+import ProductList from "../components/Products/AllProducts"
 import SearchBox from '../components/search-box';
+import SelectDropBox from '../components/SelectDropBox';
+import SelectDropBoxTwo from '../components/SelectDropBoxTwo';
+
 
 
 function OrderPage() {
@@ -10,7 +13,13 @@ function OrderPage() {
         <header >
           <div className="mx-auto max-w-7xl py-10 px-8 sm:px-6 lg:px-8"></div>
         </header>
-        <SearchBox/>
+        {/* <SearchBox/>
+        <br></br> */}
+        <SelectDropBox/>
+        <div className="flex justify-center">
+        <SelectDropBoxTwo/>
+        </div>
+        
         <ProductList/>
         <Outlet />
     </>
