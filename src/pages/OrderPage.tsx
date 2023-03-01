@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
-import NavBar from '../components/NavBar/NavBar';
+import NavBar from '../components/NavBar/BottomNavBar';
+import TopNavBar from '../components/NavBar/TopNavBar';
 import ProductList from "../components/Products/AllProducts"
 import SearchBox from '../components/search-box';
 import SelectDropBox from '../components/SelectDropBox';
@@ -16,9 +17,9 @@ function OrderPage() {
         {/* <SearchBox/>
         <br></br> */}
         <SelectDropBox/>
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
         <SelectDropBoxTwo/>
-        </div>
+        </div> */}
         
         <ProductList/>
         <Outlet />

@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CustomersProfile from './components/Customers/CustomersProfile';
-import NavBar from './components/NavBar/NavBar';
+import NavBar from './components/NavBar/BottomNavBar';
+import TopNavBar from './components/NavBar/TopNavBar';
 import ADCTTron from './components/Products/AoDaiCachTan/ADCTTron';
 import ADTTHoaTiet from './components/Products/AoDaiTruyenThong/ADTTHoaTiet';
 import ADTTTron from './components/Products/AoDaiTruyenThong/ADTTTron';

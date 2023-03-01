@@ -4,9 +4,10 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import SearchBox from '../components/search-box';
 import ProductList from '../components/Products/AllProducts';
-import NavBar from '../components/NavBar/NavBar';
+import NavBar from '../components/NavBar/BottomNavBar';
 import NavItem from '../components/NavBar/NavItem/NavItem';
 import CreOrdBut from '../components/CreOrdBut';
+import TopNavBar from '../components/NavBar/TopNavBar';
 
 
 
@@ -17,6 +18,7 @@ function classNames(...classes: any[]) {
 function WelcomePage() {
   return (
     <>
+      <TopNavBar/>
       <div className="min-h-full">
         <header >
           <div className="mx-auto max-w-7xl py-10 px-8 sm:px-6 lg:px-8"></div>
