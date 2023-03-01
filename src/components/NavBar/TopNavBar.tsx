@@ -14,7 +14,7 @@ const TopNavBar = () => {
                 <div className="flex flex-shrink-0 items-center">
                     
                     <img
-                        className="block h-8 w-auto lg:hidden"
+                        className="block h-8 w-auto lg:hidden gap-[2.75rem]"
                         src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                         alt="Your Company"
                     />

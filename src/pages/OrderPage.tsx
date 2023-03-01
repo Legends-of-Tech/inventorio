@@ -1,5 +1,6 @@
 import { Divider } from '@mui/material';
 import { Outlet } from 'react-router-dom';
+import PreviousIcon from '../components/IconFunction/PreviousIcon';
 import NavBar from '../components/NavBar/BottomNavBar';
 import TopNavBar from '../components/NavBar/TopNavBar';
 import ProductList from "../components/Products/AllProducts"
@@ -7,6 +8,8 @@ import SearchBox from '../components/search-box';
 import SelectDropBox from '../components/SelectDropBox';
 import SelectDropBoxTwo from '../components/SelectDropBoxTwo';
 import TagChipItem from '../components/TagChip/TagChipItem/TagChipItem';
+import Grid from '@mui/material/Grid';
+import './OrderPage.css'
 
 
 
@@ -16,7 +19,10 @@ function OrderPage() {
         <header >
           <div className="mx-auto max-w-7xl py-12 px-8 sm:px-6 lg:px-8"></div>
         </header>
-        <SelectDropBox/>
+        <div className="container">
+          <div className="prev-icon"><PreviousIcon/></div>
+          <div className="select-box"><SelectDropBox/></div>
+        </div>
         <br/>
         <div className='flex justify-center'>
           <TagChipItem label="Áo Dài Trơn" path='/'/>
