@@ -15,7 +15,7 @@ function OrderPage() {
     <>
         <TopNavBar/>
         <header >
-          <div className="mx-auto max-w-7xl py-6 px-8 sm:px-6 lg:px-8"></div>
+          <div className="mx-auto max-w-7xl py-3 px-8 sm:px-6 lg:px-8"></div>
         </header>
         <SelectDropBox/>
         <br/>

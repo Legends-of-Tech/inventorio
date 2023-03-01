@@ -14,6 +14,8 @@
 */
 const products = [
     {
+      category: 'AoDaiTruyenThong',
+      tag: 'Tron',
       id: 1,
       name: 'Áo Dài #1',
       href: '#',
@@ -23,6 +25,8 @@ const products = [
       color: 'Trắng',
     },
     {
+      category: 'AoDaiTruyenThong',
+      tag: 'Tron',
       id: 2,
       name: 'Áo Dài #2',
       href: '#',
@@ -32,6 +36,8 @@ const products = [
       color: 'Vàng',
     },
     {
+      category: 'AoDaiTruyenThong',
+      tag: 'Tron',
       id: 3,
       name: 'Áo Dài #3',
       href: '#',
@@ -41,6 +47,8 @@ const products = [
       color: 'Xanh',
     },
     {
+      category: 'AoDaiTruyenThong',
+      tag: 'Tron',
       id: 4,
       name: 'Áo Dài #4',
       href: '#',
