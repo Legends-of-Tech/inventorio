@@ -31,6 +31,7 @@ function App() {
             <Route path='/vay-ao-dai-mot-lop' element={<VayADMotLop/>}/>
             <Route path='/vay-ao-dai-hai-lop' element={<VayADHaiLop/>}/>
           </Routes>
+          <TopNavBar/>
           <NavBar className="fixed inset-x-0 bottom-0 h-16 right-0 vw-100"/>
         </main>
       </BrowserRouter>
