@@ -36,7 +36,7 @@ const Example: FunctionComponent<ExampleProps> = () => {
             <div className="py-1">
                 <Menu.Item>
                 {({ active }) => (
-                    <Link to='/ao-dai-truyen-thong-tron'>
+                    <Link to='/ao-dai-truyen-thong'>
                         <a className={classNames(active ? 'bg-gray-100 text-gray-900' : 'text-gray-700', 'block px-4 py-2 text-sm')}>
                         Áo Dài Truyền Thống
                         </a>
@@ -44,7 +44,7 @@ const Example: FunctionComponent<ExampleProps> = () => {
                 </Menu.Item>
                 <Menu.Item>
                 {({ active }) => (
-                    <Link to='/ao-dai-cach-tan-tron'>
+                    <Link to='/ao-dai-cach-tan'>
                         <a className={classNames(active ? 'bg-gray-100 text-gray-900' : 'text-gray-700','block px-4 py-2 text-sm')}>
                         Áo Dài Cách Tân
                         </a>
@@ -52,7 +52,7 @@ const Example: FunctionComponent<ExampleProps> = () => {
                 </Menu.Item>
                 <Menu.Item>
                 {({ active }) => (
-                    <Link to='/quan-ao-dai-mot-lop'>
+                    <Link to='/quan-ao-dai'>
                         <a className={classNames(active ? 'bg-gray-100 text-gray-900' : 'text-gray-700','block px-4 py-2 text-sm')}>
                         Quần Áo Dài
                         </a>
@@ -60,7 +60,7 @@ const Example: FunctionComponent<ExampleProps> = () => {
                 </Menu.Item>
                 <Menu.Item>
                     {({ active }) => (
-                    <Link to='/ao-dai-truyen-thong-tron'>
+                    <Link to='/vay-ao-dai'>
                         <a className={classNames(active ? 'bg-gray-100 text-gray-900' : 'text-gray-700','block px-4 py-2 text-sm')}>
                             Váy Áo Dài
                             </a>

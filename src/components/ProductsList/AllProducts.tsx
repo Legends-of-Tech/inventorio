@@ -61,34 +61,39 @@ const products = [
     },
     // More products...
   ]
+
+  type Props = {
+    header: string
+  }
+
   
-   function AllProducts() {
+   function AllProducts({header}: Props) {
     return (
 <div className="bg-white my-4 max-w-xs mx-auto">
-  <div className="mx-auto max-w-xs py-10 px-4 sm:py-24 sm:px-6 lg:max-w-xs lg:px-8">
-    {/* <h2 className="text-2xl font-bold tracking-tight text-gray-900">Kho Hàng</h2> */}
+  <div className="mx-auto max-w-xs py-6 px-4 sm:py-10 sm:px-6 lg:max-w-xs lg:px-8">
+    <h2 className="text-2xl font-bold tracking-tight text-gray-900">{header}</h2>
 
-    <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+    <div className="mt-4 grid grid-cols-1 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
       {products.map((product) => (
         <div key={product.id} className="group relative">
-          <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
+          <div className="min-h-48 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-48">
             <img
               src={product.imageSrc}
               alt={product.imageAlt}
               className="h-full w-full object-cover object-center lg:h-full lg:w-full"
             />
           </div>
-          <div className="mt-4 flex justify-between">
+          <div className="mt-2 flex justify-between">
             <div>
-              <h3 className="text-lg text-gray-700">
+              <h3 className="text-xl font-bold text-gray-700">
                 <a href={product.href}>
                   <span aria-hidden="true" className="absolute inset-0" />
                   {product.name}
                 </a>
               </h3>
-              <p className="mt-1 text-sm text-gray-500">{product.color}</p>
+              <p className="mt-1 text-xs text-gray-500">{product.color}</p>
             </div>
-            <p className="text-sm font-medium text-gray-900">{product.price}</p>
+            <p className="text-md font-medium text-gray-900">{product.price}</p>
           </div>
         </div>
       ))}
