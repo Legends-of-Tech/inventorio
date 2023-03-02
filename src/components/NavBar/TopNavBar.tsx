@@ -11,16 +11,19 @@ const TopNavBar = () => {
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between"> 
             <Link to='/'>
-                <div className="flex flex-shrink-0 items-center">
+                <div className="flex flex-shrink-0 items-center" >
                     
                     <img
+                        style={{marginLeft: '8px'}}
                         className="block h-8 w-auto lg:hidden gap-[2.75rem]"
                         src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                         alt="Your Company"
                     />
                 </div>
               </Link>
-              <SearchBox/>
+              <div style={{marginRight: '8px'}}>
+                <SearchBox/>
+              </div>
             </div>
           </div>
     </Disclosure>

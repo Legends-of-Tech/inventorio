@@ -1,6 +1,6 @@
 import React from 'react'
 import DropBoxSelection from '../../DropBoxSection/DropBoxSection'
-import AllProducts from '../AllProducts'
+import AllProducts from '../../ProductsList/AllProducts'
 
 
 const VayADHaiLop = () => {

@@ -1,6 +1,6 @@
 import React from 'react'
 import DropBoxSection from '../../DropBoxSection/DropBoxSection'
-import AllProducts from '../AllProducts'
+import AllProducts from '../../ProductsList/AllProducts'
 
 const ADCTTron = () => {
   return (

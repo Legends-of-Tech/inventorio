@@ -1,7 +1,7 @@
 import React from 'react'
 import DropBoxSection from '../../DropBoxSection/DropBoxSection'
 import SearchBox from '../../search-box'
-import AllProducts from '../AllProducts'
+import AllProducts from '../../ProductsList/AllProducts'
 
 
 const ADTTTron = () => {
