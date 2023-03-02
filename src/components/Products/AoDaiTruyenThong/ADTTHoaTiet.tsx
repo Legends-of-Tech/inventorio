@@ -1,5 +1,5 @@
 import React from 'react'
-import SelectDropBox from '../../SelectDropBox'
+import DropBoxSection from '../../DropBoxSection/DropBoxSection'
 import AllProducts from '../AllProducts'
 
 
@@ -9,8 +9,7 @@ const ADTTHoaTiet = () => {
         <header >
         <div className="mx-auto max-w-7xl py-10 px-8 sm:px-6 lg:px-8"></div>
         </header>
-        {/* <SearchBox/> */}
-        <SelectDropBox/>
+        <DropBoxSection/>
         <AllProducts/>
     </div>
   )
