@@ -1,4 +1,7 @@
 {
+  "providers": [
+    "awscloudformation"
+  ],
   "projectName": "Inventorio",
   "version": "3.1",
   "frontend": "javascript",
@@ -8,10 +11,7 @@
       "SourceDir": "src",
       "DistributionDir": "build",
       "BuildCommand": "pnpm run build",
-      "StartCommand": "pnpm run start"
+      "StartCommand": "pnpm run dev"
     }
-  },
-  "providers": [
-    "awscloudformation"
-  ]
+  }
 }

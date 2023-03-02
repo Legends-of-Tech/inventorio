@@ -8,7 +8,10 @@ import QuanAoDai from './components/Products/QuanAoDai/QuanAoDai';
 import VayAoDai from './components/Products/VayAoDai/VayAoDai';
 import OrderPage from './pages/OrderPage';
 import WelcomePage from './pages/WelcomePage';
+import { Amplify, API, graphqlOperation } from 'aws-amplify';
+import awsconfig from './aws-exports';
 
+Amplify.configure(awsconfig);
 
 function App() {
   return (
