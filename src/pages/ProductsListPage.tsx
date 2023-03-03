@@ -7,9 +7,10 @@ import SearchBox from '../components/search-box';
 import TagChipItem from '../components/TagChip/TagChipItem/TagChipItem';
 import Grid from '@mui/material/Grid';
 import DropBoxSection from '../components/DropBoxSection/DropBoxSection';
+import AllProducts from '../components/ProductsList/AllProducts';
 
 
-function OrderPage() {
+function ProductsListPage() {
     return(
     <>
         <header >
@@ -23,10 +24,10 @@ function OrderPage() {
           </div>
           <TagChipItem label="Áo Dài Có Họa Tiết" path='/'/>
         </div>
-        <ProductList/>
+        <AllProducts header={'Tất Cả Sản Phẩm'}/>
         <Outlet />
     </>
     )
 }
 
-export default OrderPage;
+export default ProductsListPage;
