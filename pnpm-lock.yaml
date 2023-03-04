@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@aws-amplify/api': ^5.0.16
   '@aws-amplify/ui-react': ^4.3.9
   '@emotion/react': ^11.10.6
   '@emotion/styled': ^11.10.6
@@ -30,6 +31,7 @@ specifiers:
   vite: ^4.1.4
 
 dependencies:
+  '@aws-amplify/api': 5.0.16
   '@aws-amplify/ui-react': 4.3.9_ebmn4rmwvzt474tmjcdnchmmtq
   '@emotion/react': 11.10.6_pmekkgnqduwlme35zpnqhenc34
   '@emotion/styled': 11.10.6_oouaibmszuch5k64ms7uxp2aia

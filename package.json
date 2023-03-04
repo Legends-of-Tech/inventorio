@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@aws-amplify/api": "^5.0.16",
     "@aws-amplify/ui-react": "^4.3.9",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
