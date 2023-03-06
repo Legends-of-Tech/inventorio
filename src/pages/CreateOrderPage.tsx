@@ -20,7 +20,7 @@ const CreateOrderPage = (props: Props) => {
               <PersonIcon/>
             </div>
             <h1 className="text-lg font-bold tracking-tight text-gray-900 inline-block border-b border-gray-900 display-inline">Khách Hàng</h1>
-            <div className="right-icon display-inline">
+            <div className="display-inline">
               <KeyboardArrowRightIcon/>
             </div>
           </div>
@@ -34,22 +34,22 @@ const CreateOrderPage = (props: Props) => {
       </div>
     </main>
     <div className="bottom-section">
-      <div className="bg-white shadow">
-        <div className="mx-auto max-w-7xl py-3 px-8 sm:px-6 lg:px-8 flex items-center justify-between">
-              <div className="basket-icon display-inline">
-                <ShoppingBasketIcon/>
-              </div>
-              <div className=" display-inline flex flex-start">
-              <h1 className="text-lg font-bold tracking-tight text-gray-900 inline-block border-b border-gray-900 display-inline px-2">Tổng Đơn</h1>
-                <span className="inline-flex items-center rounded-l-md border border-r-0 border-gray-300 px-3 text-gray-500 sm:text-sm">
+    <section className="bg-white shadow top-section">
+        <div className="mx-auto max-w-7xl py-2 px-8 sm:px-6 lg:px-8 flex items-center justify-between">
+            <div className="basket-icon display-inline">
+              <ShoppingBasketIcon/>
+            </div>
+            <h1 className="text-lg font-bold tracking-tight text-gray-900 inline-block border-b border-gray-900 display-inline">Tổng Đơn</h1>
+            <div className="display-inline">
+              <span className="total inline-flex items-center rounded-l-md border border-r-0 border-gray-300 px-3 text-gray-500 sm:text-sm">
                   0 
                 </span>
-                <span className="inline-flex items-center border border-r-0 border-gray-300 px-3 text-gray-500 sm:text-sm">
+                <span className="total inline-flex items-center border border-r-0 border-gray-300 px-4 text-gray-500 sm:text-sm">
                   0đ
                 </span>
-              </div>
             </div>
-        </div>
+          </div>
+      </section>
         <div className="bg-white shadow mx-auto max-w-7xl py-3 sm:px-6 lg:px-8" style={{ marginTop: "1px" }}>
           <div className="flex justify-center">
             <Link to="/">
