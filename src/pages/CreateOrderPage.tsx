@@ -6,6 +6,7 @@ import "./CreateOrderPage.css"
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import { ShoppingCartRounded } from '@mui/icons-material';
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 
 type Props = {}
 
@@ -32,14 +33,32 @@ const CreateOrderPage = (props: Props) => {
         </div>
       </div>
     </main>
-    <div className="bottom-section bg-white shadow mx-auto max-w-7xl py-3 sm:px-6 lg:px-8">
-        <div className="flex justify-center" >
-          <Link to="/">
-            <Button variant="contained" startIcon={<ShoppingCartRounded />}>
-            Hoàn Tất Đơn Hàng
-            </Button>
-          </Link>
+    <div className="bottom-section">
+      <div className="bg-white shadow">
+        <div className="mx-auto max-w-7xl py-3 px-8 sm:px-6 lg:px-8 flex items-center justify-between">
+              <div className="basket-icon display-inline">
+                <ShoppingBasketIcon/>
+              </div>
+              <div className=" display-inline flex flex-start">
+              <h1 className="text-lg font-bold tracking-tight text-gray-900 inline-block border-b border-gray-900 display-inline px-2">Tổng Đơn</h1>
+                <span className="inline-flex items-center rounded-l-md border border-r-0 border-gray-300 px-3 text-gray-500 sm:text-sm">
+                  0 
+                </span>
+                <span className="inline-flex items-center border border-r-0 border-gray-300 px-3 text-gray-500 sm:text-sm">
+                  0đ
+                </span>
+              </div>
+            </div>
         </div>
+        <div className="bg-white shadow mx-auto max-w-7xl py-3 sm:px-6 lg:px-8" style={{ marginTop: "1px" }}>
+          <div className="flex justify-center">
+            <Link to="/">
+              <Button variant="contained" startIcon={<ShoppingCartRounded />}>
+              Hoàn Tất Đơn Hàng
+              </Button>
+            </Link>
+          </div>
+      </div>
     </div>
 
   </div>
