@@ -1,4 +1,4 @@
-.top-gap{
+.top-section{
     margin-top: 60px;
 }
 .person-icon {
@@ -9,4 +9,8 @@
   h1 {
     font-size: 18px;
   }
+  
+  .bottom-section{
+    margin-top: 190px;
+}
 

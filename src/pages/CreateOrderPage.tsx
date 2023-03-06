@@ -4,13 +4,15 @@ import PersonIcon from '@mui/icons-material/Person';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import "./CreateOrderPage.css"
 import { Link } from 'react-router-dom';
+import Button from '@mui/material/Button';
+import { ShoppingCartRounded } from '@mui/icons-material';
 
 type Props = {}
 
 const CreateOrderPage = (props: Props) => {
   return (
     <div className=" min-h-full">
-      <header className="bg-white shadow top-gap">
+      <header className="bg-white shadow top-section">
       <Link to="/">
         <div className="mx-auto max-w-7xl py-2 px-8 sm:px-6 lg:px-8 flex items-center justify-between">
             <div className="person-icon display-inline">
@@ -30,7 +32,18 @@ const CreateOrderPage = (props: Props) => {
         </div>
       </div>
     </main>
+    <div className="bottom-section bg-white shadow mx-auto max-w-7xl py-3 sm:px-6 lg:px-8">
+        <div className="flex justify-center" >
+          <Link to="/">
+            <Button variant="contained" startIcon={<ShoppingCartRounded />}>
+            Hoàn Tất Đơn Hàng
+            </Button>
+          </Link>
+        </div>
+    </div>
+
   </div>
+  
   )
 }
 
