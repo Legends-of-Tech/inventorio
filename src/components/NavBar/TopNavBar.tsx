@@ -19,9 +19,9 @@ const TopNavBar = () => {
                     />
                 </div>
               </Link>
-              <div style={{marginRight: '8px'}}>
+              {/* <div style={{marginRight: '8px'}}>
                 <SearchBox/>
-              </div>
+              </div> */}
             </div>
           </div>
     </Disclosure>

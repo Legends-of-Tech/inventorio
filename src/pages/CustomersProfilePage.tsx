@@ -1,9 +1,9 @@
 import React from 'react'
 
-const CustomersProfile = () => {
+const CustomersProfilePage = () => {
   return (
     <div><h1>CustomersProfile</h1></div>
   )
 }
 
-export default CustomersProfile
+export default CustomersProfilePage
