@@ -19,7 +19,7 @@ const CreateOrderPage = (props: Props) => {
             <div className="person-icon display-inline">
               <PersonIcon/>
             </div>
-            <h1 className="text-lg font-bold tracking-tight text-gray-900 inline-block border-b border-gray-900 display-inline">Khách Hàng</h1>
+            <h1 className="text-lg font-bold tracking-tight text-gray-900 inline-block  display-inline">Khách Hàng</h1>
             <div className="display-inline">
               <KeyboardArrowRightIcon/>
             </div>
@@ -39,7 +39,8 @@ const CreateOrderPage = (props: Props) => {
             <div className="basket-icon display-inline">
               <ShoppingBasketIcon/>
             </div>
-            <h1 className="text-lg font-bold tracking-tight text-gray-900 inline-block border-b border-gray-900 display-inline">Tổng Đơn</h1>
+                           {/* border-b border-gray-900 for the under line */}
+            <h1 className="text-lg font-bold tracking-tight text-gray-900 inline-block  display-inline">TỔNG ĐƠN </h1> 
             <div className="display-inline">
               <span className="total inline-flex items-center rounded-l-md border border-r-0 border-gray-300 px-3 text-gray-500 sm:text-sm">
                   0 
