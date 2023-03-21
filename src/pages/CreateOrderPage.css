@@ -1,21 +1,7 @@
-.top-section{
-    margin-top: 60px;
-}
-.person-icon {
-    margin-right: -188px;
-    padding-bottom: 2px;
-    margin-left: -18px;
-}
 
-
-.bottom-section{
-  margin-top: 144px;
-}
-
-.basket-icon {
-  margin-right: -98px;
-  padding-bottom: 2px;
-  margin-left: -18px;
+.top-section {
+  border-radius: 4px;
+  margin-top: 60px;
 }
 
 
