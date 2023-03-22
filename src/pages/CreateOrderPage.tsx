@@ -14,7 +14,7 @@ type Props = {}
 const CreateOrderPage = () => {
   return (
     <div className="min-h-full">
-      <header className="top-section py-3 px-12 w-full max-w-screen-lg flex items-center justify-center border-b border-black fixed top-60 left-0 right-0 z-10">
+      <header className="top-section py-3 px-12 w-full max-w-screen-lg flex items-center justify-center border-b border-black">
         <h1 className="text-3xl font-bold tracking-tight text-gray-900">
           Khách Hàng
         </h1>
