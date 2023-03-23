@@ -49,7 +49,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const HeaderCusPgSection= () => {
     return (
       <div className="min-h-full">
-        <header className="top-section py-3 px-12 w-full max-w-screen-lg flex items-center justify-center border-b border-black">
+        <header className="py-3 px-12 w-full max-w-screen-lg flex items-center justify-center">
         <Box
       sx={{
         display: 'flex',
@@ -77,7 +77,7 @@ const HeaderCusPgSection= () => {
             <SearchIcon />
           </SearchIconWrapper>
           <StyledInputBase
-            placeholder="Search…"
+            placeholder="Tìm Kiếm"
             inputProps={{ 'aria-label': 'search' }}
           />
         </Search>
