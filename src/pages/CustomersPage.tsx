@@ -3,6 +3,7 @@ import AlphabetSortSection from '../components/Customers/AlphabetSortSection';
 import HeaderCusPgSection from '../components/Customers/Header/HeaderCusPgSection';
 import { Box } from '@mui/material';
 import './CustomersPage.css'
+import CustomerDetailSection from '../components/Customers/CustomerDetailSection';
 
 type Props = {};
 
@@ -11,7 +12,7 @@ const CustomersPage = (props: Props) => {
     <div className="top-section">
         <HeaderCusPgSection />
         <AlphabetSortSection label={"A"} />
-        <AlphabetSortSection label={"B"} />
+        <CustomerDetailSection name={"Anh Hai"} PhoneNumber={"0422909791"}/>
     </div>
   );
 };

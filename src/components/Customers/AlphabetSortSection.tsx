@@ -17,7 +17,7 @@ const AlphabetSortSection: React.FC<AlphabetSortSectionProps> = ({ label }) => {
         backgroundColor: '#ECEFF1',
         width: '100%',
         height: '100%',
-        minHeight: '40px',
+        minHeight: '30px',
       }}
     >
       <Typography variant="h6" component="div" sx={{ marginLeft: '16px' }}>
