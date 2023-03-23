@@ -12,6 +12,9 @@ import * as queries from '../graphql/queries';
 import { API } from 'aws-amplify';
 import { ListProductsQuery } from '../API';
 import { GraphQLQuery, GRAPHQL_AUTH_MODE } from '@aws-amplify/api';
+import { Fab} from '@mui/material';
+import AddIcon from '@mui/icons-material/Add';
+import { Link } from 'react-router-dom';
 
 
 
@@ -54,7 +57,14 @@ function WelcomePage() {
         <main>
           <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
             <div className="px-38 py-40 sm:px-0">
-              <CreOrdBut label='Tạo Đơn Hàng' path='create-order-page'/>
+              <div className="flex justify-center">
+                <Link to="/create-order-page">
+                <Fab variant="extended" size="large" color="primary">
+                    <AddIcon sx={{ mr: 1 }} />
+                    Tạo Đơn Hàng
+                </Fab>
+                </Link>
+              </div>
             </div>
           </div>
         </main>

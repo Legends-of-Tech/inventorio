@@ -8,18 +8,42 @@ import Button from '@mui/material/Button';
 import { ShoppingCartRounded } from '@mui/icons-material';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import "./CreateOrderPage.css"
+import { Fab } from '@mui/material';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
-type Props = {}
 
 const CreateOrderPage = () => {
   return (
     <div className="min-h-full">
       <header className="top-section py-3 px-12 w-full max-w-screen-lg flex items-center justify-center border-b border-black">
         <h1 className="text-3xl font-bold tracking-tight text-gray-900">
-          Khách Hàng
+          Tạo Đơn Hàng
         </h1>
       </header>
-      {/* Add additional content here, such as a main section */}
+      <div className="fixed top-40 left-0 right-0 z-10 flex justify-center">
+        <Link to="/customers-page">
+          <Fab
+            variant="extended"
+            size="large"
+            sx={{
+              backgroundColor: "white",
+              color: "#90A4AE",
+              border: "1.5px solid #90A4AE"
+            }}
+          >
+            <AccountCircleIcon sx={{ mr: 1, color: "#90A4AE", fontSize: "2rem" }} />
+            <span
+              style={{
+                fontSize: "1.2rem",
+                fontFamily: "Arial, sans-serif",
+                fontWeight: 500,
+                textTransform: "capitalize",
+              }}>
+              Chọn Khách Hàng
+            </span>
+          </Fab>
+        </Link>
+      </div>
     </div>
 
 
