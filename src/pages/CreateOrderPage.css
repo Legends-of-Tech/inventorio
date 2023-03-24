@@ -9,4 +9,6 @@
   /* Add other styles for your header */
 }
 
-
+.content {
+  padding-bottom: 3rem; /* Space for the sticky-bottom div */
+}
