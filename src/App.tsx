@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import NavBar from './components/NavBar/BottomNavBar';
 import TopNavBar from './components/NavBar/TopNavBar';
 import AoDaiCachTan from './components/Products/AoDaiCachTan/AoDaiCachTan';
@@ -15,27 +15,46 @@ import CustomersPage from './pages/CustomersPage';
 
 Amplify.configure(awsconfig);
 
+function Navigation() {
+  const location = useLocation();
+
+  const renderNavBar = () => {
+    const excludedPaths = ['/create-order-page', '/customers-page'];
+
+    if (excludedPaths.includes(location.pathname)) {
+      return null;
+    }
+
+    return <NavBar className="fixed inset-x-0 bottom-0 h-16 right-0 vw-100" />;
+  };
+
+  return (
+    <>
+      <TopNavBar />
+      {renderNavBar()}
+    </>
+  );
+}
 function App() {
   return (
     <div className="relative h-screen w-100">
       <BrowserRouter>
-      <main className="mb-auto">
+        <main className="mb-auto">
           <Routes>
-          <Route path='/' element={<WelcomePage/>}/>
-          <Route path='/all-products' element={<ProductListPage/>}/>
-          <Route path='/create-order-page' element={<CreateOrderPage/>}/>
-          <Route path='/customers-page' element={<CustomersPage/>}/>
-          <Route path='/ao-dai-truyen-thong' element={<AoDaiTruyenThong/>}/>
-          <Route path='/ao-dai-cach-tan' element={<AoDaiCachTan/>}/>
-          <Route path='/quan-ao-dai' element={<QuanAoDai/>}/>
-          <Route path='/vay-ao-dai' element={<VayAoDai/>}/>
+            <Route path="/" element={<WelcomePage />} />
+            <Route path="/all-products" element={<ProductListPage />} />
+            <Route path="/create-order-page" element={<CreateOrderPage />} />
+            <Route path="/customers-page" element={<CustomersPage />} />
+            <Route path="/ao-dai-truyen-thong" element={<AoDaiTruyenThong />} />
+            <Route path="/ao-dai-cach-tan" element={<AoDaiCachTan />} />
+            <Route path="/quan-ao-dai" element={<QuanAoDai />} />
+            <Route path="/vay-ao-dai" element={<VayAoDai />} />
           </Routes>
-          <TopNavBar/>
-          <NavBar className="fixed inset-x-0 bottom-0 h-16 right-0 vw-100"/>
+          <Navigation />
         </main>
       </BrowserRouter>
     </div>
-  )
+  );
 }
 
 export default App;
