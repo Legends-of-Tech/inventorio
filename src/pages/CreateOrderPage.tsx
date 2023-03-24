@@ -10,6 +10,7 @@ import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import "./CreateOrderPage.css"
 import { Fab } from '@mui/material';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 
 const CreateOrderPage = () => {
@@ -17,11 +18,16 @@ const CreateOrderPage = () => {
     <div className="min-h-full">
       <div className="content flex flex-col min-h-screen">
         <header className="top-section py-3 px-12 w-full max-w-screen-lg flex items-center justify-center border-b border-black">
-          <h1 className="text-3xl font-bold tracking-tight text-gray-900">
+          <div className="flex items-center absolute top-4 left-5">
+            <Link to="/">
+              <ArrowBackIcon sx={{ fontSize: '1.6rem' }} />
+            </Link>
+          </div>
+          <h1 className="text-3xl font-bold tracking-tight text-gray-900 mt-3.5">
             Tạo Đơn Hàng
           </h1>
         </header>
-        <div className="fixed top-40 left-0 right-0 z-10 flex justify-center">
+        <div className="fixed top-40 left-0 right-0 z-10 flex justify-center mt-5">
           <Link to="/customers-page">
             <Fab
               variant="extended"
@@ -48,7 +54,6 @@ const CreateOrderPage = () => {
       </div>
 
       <div className="sticky-bottom">
-
         <div className="flex items-center justify-between w-full mb-2.5">
           <div className="flex items-center ml-5">
             <ShoppingBasketIcon />
@@ -65,53 +70,14 @@ const CreateOrderPage = () => {
             </span>
           </div>    
         </div>
-
-
         <div className="w-full bg-white border-t border-black py-2.5 flex items-center justify-center">
             <Button variant="contained" startIcon={<ShoppingCartRounded />}>
             Hoàn Tất Đơn Hàng
             </Button>
         </div>
       </div>
-
-
-
       </div>
 
-
-
-
-
-    
-    // <div className="bottom-section">
-    // <section className="bg-white shadow top-section">
-    //     <div className="mx-auto max-w-7xl py-2 px-8 sm:px-6 lg:px-8 flex items-center justify-between">
-    //         <div className="basket-icon display-inline">
-    //           <ShoppingBasketIcon/>
-    //         </div>
-    //                        {/* border-b border-gray-900 for the under line */}
-    //         <h1 className="text-lg font-bold tracking-tight text-gray-900 inline-block  display-inline">TỔNG ĐƠN </h1> 
-    //         <div className="display-inline">
-    //           <span className="total inline-flex items-center rounded-l-md border border-r-0 border-gray-300 px-3 text-gray-500 sm:text-sm">
-    //               0 
-    //             </span>
-    //             <span className="total inline-flex items-center border border-r-0 border-gray-300 px-4 text-gray-500 sm:text-sm">
-    //               0đ
-    //             </span>
-    //         </div>
-    //       </div>
-    //   </section>
-    //     <div className="bg-white shadow mx-auto max-w-7xl py-3 sm:px-6 lg:px-8" style={{ marginTop: "1px" }}>
-    //       <div className="flex justify-center">
-    //         <Link to="/">
-    //           <Button variant="contained" startIcon={<ShoppingCartRounded />}>
-    //           Hoàn Tất Đơn Hàng
-    //           </Button>
-    //         </Link>
-    //       </div>
-    //   </div>
-    // </div>
-  
   )
 }
 

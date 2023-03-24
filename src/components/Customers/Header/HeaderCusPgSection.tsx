@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import AddIcon from '@mui/icons-material/Add';
+import {Link} from 'react-router-dom';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -62,7 +63,9 @@ const HeaderCusPgSection= () => {
           position: 'absolute',
           left: 0,
         }}>
-        <ArrowBackIcon sx={{ fontSize: '2rem' }} />
+        <Link to='/create-order-page'>
+          <ArrowBackIcon sx={{ fontSize: '2rem' }} />
+        </Link>
       </IconButton>
       <Box
         sx={{
