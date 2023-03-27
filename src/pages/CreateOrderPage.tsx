@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import { ShoppingCartRounded } from '@mui/icons-material';
+import { ShoppingCartRounded} from '@mui/icons-material';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import { Fab } from '@mui/material';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -9,13 +9,27 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import CustomersList from '../components/Customers/CustomersList/CustomersList';
+import HeaderCusPgSection from '../components/Customers/Header/HeaderCusPgSection';
+import AlphabetSortSection from '../components/Customers/AlphabetSortSection';
+import CustomerDetailSection from '../components/Customers/CustomerDetailSection';
+import './CreateOrderPage.css'
+
 
 
 
 const CreateOrderPage = () => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [showCustomerDetail, setShowCustomerDetail] = useState(false);
+
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const handleCustomerInfoClick = () => {
+    setShowCustomerDetail(true);
+    handleClose();
+  };
+
+  
   return (
     <div className="min-h-full">
       <div className="content flex flex-col min-h-screen">
@@ -29,6 +43,15 @@ const CreateOrderPage = () => {
             Tạo Đơn Hàng
           </h1>
         </header>
+
+
+
+
+
+
+
+
+        
         <div className="fixed top-40 left-0 right-0 z-10 flex justify-center mt-5">
           <Fab
             onClick={handleOpen}
@@ -70,13 +93,26 @@ const CreateOrderPage = () => {
                 p: 4,
                 overflowY: 'auto',
               }}>
-                <CustomersList/>
+                <div className="CustomersModal">
+                  <div className="CustomerInfo">
+                    <HeaderCusPgSection />
+                    <AlphabetSortSection label={"A"} />
+                    <CustomerDetailSection name={"Anh Hai"} PhoneNumber={"0422909791"}/>
+                  </div>
+                </div>
               </Box>
           </Modal>
         </div>
       </div>
 
-      <div className="sticky-bottom">
+
+
+
+
+
+
+
+      {/* <div className="sticky-bottom">
         <div className="flex items-center justify-between w-full mb-2.5">
           <div className="flex items-center ml-5">
             <ShoppingBasketIcon />
@@ -98,7 +134,7 @@ const CreateOrderPage = () => {
             Hoàn Tất Đơn Hàng
             </Button>
         </div>
-      </div>
+      </div> */}
       </div>
 
   )
