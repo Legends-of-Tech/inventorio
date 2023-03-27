@@ -1,19 +1,21 @@
 import React from 'react'
-import CreOrdBut from '../components/CreOrdBut'
-import PersonIcon from '@mui/icons-material/Person';
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import "./CreateOrderPage.css"
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import { ShoppingCartRounded } from '@mui/icons-material';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
-import "./CreateOrderPage.css"
 import { Fab } from '@mui/material';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import Modal from '@mui/material/Modal';
+import Box from '@mui/material/Box';
+import CustomersList from '../components/Customers/CustomersList/CustomersList';
+
 
 
 const CreateOrderPage = () => {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <div className="min-h-full">
       <div className="content flex flex-col min-h-screen">
@@ -28,28 +30,49 @@ const CreateOrderPage = () => {
           </h1>
         </header>
         <div className="fixed top-40 left-0 right-0 z-10 flex justify-center mt-5">
-          <Link to="/customers-page">
-            <Fab
-              variant="extended"
-              size="large"
+          <Fab
+            onClick={handleOpen}
+            variant="extended"
+            size="large"
+            sx={{
+              backgroundColor: "white",
+              color: "#90A4AE",
+              border: "1.5px solid #90A4AE"
+            }}
+          >
+            <AccountCircleIcon sx={{ mr: 1, color: "#90A4AE", fontSize: "2rem" }} />
+            <span
+              style={{
+                fontSize: "1.2rem",
+                fontFamily: "Arial, sans-serif",
+                fontWeight: 500,
+                textTransform: "capitalize",
+              }}>
+              Chọn Khách Hàng
+            </span>
+          </Fab>
+          <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description">
+            <Box
               sx={{
-                backgroundColor: "white",
-                color: "#90A4AE",
-                border: "1.5px solid #90A4AE"
-              }}
-            >
-              <AccountCircleIcon sx={{ mr: 1, color: "#90A4AE", fontSize: "2rem" }} />
-              <span
-                style={{
-                  fontSize: "1.2rem",
-                  fontFamily: "Arial, sans-serif",
-                  fontWeight: 500,
-                  textTransform: "capitalize",
-                }}>
-                Chọn Khách Hàng
-              </span>
-            </Fab>
-          </Link>
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                bgcolor: 'white',
+                width: '80%', // or any desired width (e.g., '500px')
+                height: '80%', // or any desired height (e.g., '600px')
+                boxShadow: 24,
+                borderRadius: 1,
+                p: 4,
+                overflowY: 'auto',
+              }}>
+                <CustomersList/>
+              </Box>
+          </Modal>
         </div>
       </div>
 
