@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import { ShoppingCartRounded} from '@mui/icons-material';
+import { ShoppingCartRounded } from '@mui/icons-material';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import { Fab } from '@mui/material';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -12,24 +12,23 @@ import CustomersList from '../components/Customers/CustomersList/CustomersList';
 import HeaderCusPgSection from '../components/Customers/Header/HeaderCusPgSection';
 import AlphabetSortSection from '../components/Customers/AlphabetSortSection';
 import CustomerDetailSection from '../components/Customers/CustomerDetailSection';
-import './CreateOrderPage.css'
-
+import CustomerInfoSection from '../components/Customers/CustomerInfoSection';
 
 
 
 const CreateOrderPage = () => {
-  const [open, setOpen] = useState(false);
-  const [showCustomerDetail, setShowCustomerDetail] = useState(false);
+  const [open, setOpen] = React.useState(false);
+  const [showFab, setShowFab] = React.useState(true);
+  const [showCustomerInfo, setShowCustomerInfo] = React.useState(false);
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const handleCustomerInfoClick = () => {
-    setShowCustomerDetail(true);
+  const handleCustomerSelection = () => {
     handleClose();
+    setShowFab(false);
+    setShowCustomerInfo(true);
   };
-
-  
   return (
     <div className="min-h-full">
       <div className="content flex flex-col min-h-screen">
@@ -52,92 +51,93 @@ const CreateOrderPage = () => {
 
 
         
-        <div className="fixed top-40 left-0 right-0 z-10 flex justify-center mt-5">
-          <Fab
-            onClick={handleOpen}
-            variant="extended"
-            size="large"
+        {showFab && (
+          <div className="fixed top-40 left-0 right-0 z-10 flex justify-center mt-5">
+            <Fab
+              onClick={handleOpen}
+              variant="extended"
+              size="large"
+              sx={{
+                backgroundColor: 'white',
+                color: '#90A4AE',
+                border: '1.5px solid #90A4AE',
+              }}
+            >
+              <AccountCircleIcon sx={{ mr: 1, color: '#90A4AE', fontSize: '2rem' }} />
+              <span
+                style={{
+                  fontSize: '1.2rem',
+                  fontFamily: 'Arial, sans-serif',
+                  fontWeight: 500,
+                  textTransform: 'capitalize',
+                }}
+              >
+                Chọn Khách Hàng
+              </span>
+            </Fab>
+          </div>
+        )}
+         {showCustomerInfo && <CustomerInfoSection />}
+         <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box
             sx={{
-              backgroundColor: "white",
-              color: "#90A4AE",
-              border: "1.5px solid #90A4AE"
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              bgcolor: 'white',
+              width: '80%', // or any desired width (e.g., '500px')
+              height: '80%', // or any desired height (e.g., '600px')
+              boxShadow: 24,
+              borderRadius: 1,
+              p: 4,
+              overflowY: 'auto',
             }}
           >
-            <AccountCircleIcon sx={{ mr: 1, color: "#90A4AE", fontSize: "2rem" }} />
-            <span
-              style={{
-                fontSize: "1.2rem",
-                fontFamily: "Arial, sans-serif",
-                fontWeight: 500,
-                textTransform: "capitalize",
-              }}>
-              Chọn Khách Hàng
-            </span>
-          </Fab>
-          <Modal
-            open={open}
-            onClose={handleClose}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description">
-            <Box
-              sx={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                bgcolor: 'white',
-                width: '80%', // or any desired width (e.g., '500px')
-                height: '80%', // or any desired height (e.g., '600px')
-                boxShadow: 24,
-                borderRadius: 1,
-                p: 4,
-                overflowY: 'auto',
-              }}>
-                <div className="CustomersModal">
-                  <div className="CustomerInfo">
-                    <HeaderCusPgSection />
-                    <AlphabetSortSection label={"A"} />
-                    <CustomerDetailSection name={"Anh Hai"} PhoneNumber={"0422909791"}/>
-                  </div>
-                </div>
-              </Box>
-          </Modal>
-        </div>
-      </div>
-
-
-
-
-
-
-
-
-      {/* <div className="sticky-bottom">
-        <div className="flex items-center justify-between w-full mb-2.5">
-          <div className="flex items-center ml-5">
-            <ShoppingBasketIcon />
-            <div className='flex items-center ml-3 mt-1'>
-              <h1 className="text-lg font-bold">TỔNG ĐƠN</h1>
+            <div className="CustomersModal">
+              <div
+                className="CustomerInfo"
+                onClick={() => handleCustomerSelection()}
+              >
+                <HeaderCusPgSection />
+                <AlphabetSortSection label={'A'} />
+                <CustomerDetailSection name={'Anh Hai'} PhoneNumber={'0422909791'} />
+              </div>
             </div>
+          </Box>
+        </Modal>
+        </div>
+        <div className="sticky-bottom">
+          <div className="flex items-center justify-between w-full mb-2.5">
+            <div className="flex items-center ml-5">
+              <ShoppingBasketIcon />
+              <div className='flex items-center ml-3 mt-1'>
+                <h1 className="text-lg font-bold">TỔNG ĐƠN</h1>
+              </div>
+            </div>
+            <div className="flex mr-8">
+              <span className="rounded-l-md border border-r-0 border-gray-300 px-3 text-gray-500 sm:text-sm">
+                0
+              </span>
+              <span className="border border-r-0 border-gray-300 px-4 text-gray-500 sm:text-sm">
+                0đ
+              </span>
+            </div>    
           </div>
-          <div className="flex mr-8">
-            <span className="rounded-l-md border border-r-0 border-gray-300 px-3 text-gray-500 sm:text-sm">
-              0
-            </span>
-            <span className="border border-r-0 border-gray-300 px-4 text-gray-500 sm:text-sm">
-              0đ
-            </span>
-          </div>    
+          <div className="w-full bg-white border-t border-black py-2.5 flex items-center justify-center">
+              <Button variant="contained" startIcon={<ShoppingCartRounded/>}>
+              Hoàn Tất Đơn Hàng
+              </Button>
+          </div>
         </div>
-        <div className="w-full bg-white border-t border-black py-2.5 flex items-center justify-center">
-            <Button variant="contained" startIcon={<ShoppingCartRounded />}>
-            Hoàn Tất Đơn Hàng
-            </Button>
-        </div>
-      </div> */}
       </div>
-
   )
 }
 
 export default CreateOrderPage
+
