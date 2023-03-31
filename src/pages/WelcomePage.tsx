@@ -1,13 +1,5 @@
 import '../App.css';
 import { Fragment, useEffect, useState } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import SearchBox from '../components/search-box';
-import ProductList from '../components/ProductsList/AllProducts';
-import NavBar from '../components/NavBar/BottomNavBar';
-import NavItem from '../components/NavBar/NavItem/NavItem';
-import CreOrdBut from '../components/CreOrdBut';
-import TopNavBar from '../components/NavBar/TopNavBar';
 import * as queries from '../graphql/queries';
 import { API } from 'aws-amplify';
 import { ListProductsQuery } from '../API';

@@ -19,7 +19,7 @@ function Navigation() {
   const location = useLocation();
 
   const renderNavBar = () => {
-    const excludedPaths = ['/create-order-page', '/customers-page'];
+    const excludedPaths = ['/create-order-page', '/customers-page', '/all-products'];
 
     if (excludedPaths.includes(location.pathname)) {
       return null;

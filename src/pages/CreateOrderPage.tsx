@@ -42,17 +42,9 @@ const CreateOrderPage = () => {
             Tạo Đơn Hàng
           </h1>
         </header>
-
-
-
-
-
-
-
-
         
         {showFab && (
-          <div className="fixed top-40 left-0 right-0 z-10 flex justify-center mt-5">
+          <section className="fixed top-40 left-0 right-0 z-10 flex justify-center mt-5">
             <Fab
               onClick={handleOpen}
               variant="extended"
@@ -75,9 +67,9 @@ const CreateOrderPage = () => {
                 Chọn Khách Hàng
               </span>
             </Fab>
-          </div>
+          </section>
         )}
-         {showCustomerInfo && <CustomerInfoSection />}
+         {showCustomerInfo && <CustomerInfoSection/>}
          <Modal
           open={open}
           onClose={handleClose}
@@ -111,7 +103,12 @@ const CreateOrderPage = () => {
             </div>
           </Box>
         </Modal>
-        </div>
+      </div>
+
+
+
+
+
         <div className="sticky-bottom">
           <div className="flex items-center justify-between w-full mb-2.5">
             <div className="flex items-center ml-5">
