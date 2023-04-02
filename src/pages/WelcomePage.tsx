@@ -1,14 +1,11 @@
 import '../App.css';
 import { Fragment, useEffect, useState } from 'react'
-import * as queries from '../graphql/queries';
-import { API } from 'aws-amplify';
-import { ListProductsQuery } from '../API';
+import { API, DataStore } from 'aws-amplify';
 import { GraphQLQuery, GRAPHQL_AUTH_MODE } from '@aws-amplify/api';
 import { Fab} from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import { Link } from 'react-router-dom';
-
-
+import { Product } from '../models';
 
 function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(' ')
@@ -17,26 +14,22 @@ function classNames(...classes: any[]) {
 function WelcomePage() {
   const [products, setProducts] = useState<any[]>();
 
-  useEffect(() => {
-
-    // declare the data fetching function
-    const fetchData = async () => {
-      const allProducts = await API.graphql<GraphQLQuery<ListProductsQuery>>(
-        { query: queries.listProducts,
-        }
+  const onAddedProduct = async () => {
+    try {
+      const post = await DataStore.save(
+        new Product({
+          name: 'test',
+          imageUrl: 'http://cdn.shopify.com/s/files/1/0406/6066/4485/products/LUCI3213-3_grande.jpg?v=1601353391'
+        })
       );
-      setProducts([...allProducts.data!.listProducts!.items])
-      console.log({allProducts});
-    };
-    // call the function
-    fetchData()
-    // make sure to catch any error
-    .catch(console.error);
-  }, []);
+      console.log('Post saved successfully!', post);
+    } catch (error) {
+      console.log('Error saving post', error);
+    }
+  }
 
   return (
     <>
-
       <div className="min-h-full">
         {products?.map(prod => (<h1>{prod["name"]}</h1>))}
         <div className="min-h-full ">
@@ -50,6 +43,7 @@ function WelcomePage() {
           <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
             <div className="px-38 py-40 sm:px-0">
               <div className="flex justify-center">
+                <button className='btn btn-primary' onClick={onAddedProduct}>Add Product</button>
                 <Link to="/create-order-page">
                 <Fab variant="extended" size="large" color="primary">
                     <AddIcon sx={{ mr: 1 }} />
