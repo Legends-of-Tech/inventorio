@@ -8,11 +8,11 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
-import CustomersList from '../components/Customers/CustomersList/CustomersList';
-import HeaderCusPgSection from '../components/Customers/Header/HeaderCusPgSection';
-import AlphabetSortSection from '../components/Customers/AlphabetSortSection';
-import CustomerDetailSection from '../components/Customers/CustomerDetailSection';
-import CustomerInfoSection from '../components/Customers/CustomerInfoSection';
+import CustomersList from '../../components/Customers/CustomersList/CustomersList';
+import HeaderCusPgSection from '../../components/Customers/Header/HeaderCusPgSection';
+import AlphabetSortSection from '../../components/Customers/AlphabetSortSection';
+import CustomerDetailSection from '../../components/Customers/CustomerDetailSection';
+import CustomerInfoSection from '../../components/Customers/CustomerInfoSection';
 
 
 
@@ -43,6 +43,7 @@ const CreateOrderPage = () => {
           </h1>
         </header>
         
+
         {showFab && (
           <section className="fixed top-40 left-0 right-0 z-10 flex justify-center mt-5">
             <Fab
@@ -104,6 +105,8 @@ const CreateOrderPage = () => {
           </Box>
         </Modal>
       </div>
+
+
 
 
 

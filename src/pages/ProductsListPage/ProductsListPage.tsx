@@ -1,13 +1,13 @@
 import { Divider } from '@mui/material';
 import { Outlet } from 'react-router-dom';
-import NavBar from '../components/NavBar/BottomNavBar';
-import TopNavBar from '../components/NavBar/TopNavBar';
-import ProductList from "../components/ProductsList/AllProducts"
-import SearchBox from '../components/search-box';
-import TagChipItem from '../components/TagChip/TagChipItem/TagChipItem';
+import NavBar from '../../components/NavBar/BottomNavBar';
+import TopNavBar from '../../components/NavBar/TopNavBar';
+import ProductList from "../../components/ProductsList/AllProducts"
+import SearchBox from '../../components/search-box';
+import TagChipItem from '../../components/TagChip/TagChipItem/TagChipItem';
 import Grid from '@mui/material/Grid';
-import DropBoxSection from '../components/DropBoxSection/DropBoxSection';
-import AllProducts from '../components/ProductsList/AllProducts';
+import DropBoxSection from '../../components/DropBoxSection/DropBoxSection';
+import AllProducts from '../../components/ProductsList/AllProducts';
 
 
 function ProductsListPage() {

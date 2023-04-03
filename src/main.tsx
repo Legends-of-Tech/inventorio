@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
-import OrderPage from './pages/ProductsListPage'
+import OrderPage from './pages/ProductsListPage/ProductsListPage'
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
