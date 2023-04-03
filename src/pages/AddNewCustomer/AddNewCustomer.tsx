@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -8,10 +8,25 @@ import DoneIcon from '@mui/icons-material/Done';
 import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import './AddNewCustomer.css';
+import Dialog from '@mui/material/Dialog';
+import DialogTitle from '@mui/material/DialogTitle';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogActions from '@mui/material/DialogActions';
+import Button from '@mui/material/Button';
 
 type Props = {};
 
 const AddNewCustomer = (props: Props) => {
+    const [open, setOpen] = useState(false);
+
+    const handleClickOpen = () => {
+      setOpen(true);
+    };
+  
+    const handleClose = () => {
+      setOpen(false);
+    };
   return (
     <div className="min-h-full">
       <header className="top-section py-3 px-12 w-full max-w-screen-lg flex items-center justify-center border-b border-black">
@@ -38,19 +53,33 @@ const AddNewCustomer = (props: Props) => {
             className="text-3xl font-bold tracking-tight text-gray-900 "
             style={{ textAlign: 'center', width: '100%' }} // Center the text
           >
-            Tạo Đơn Hàng
+            Thêm Khách Hàng
           </h1>
           <IconButton
+            onClick={handleClickOpen}
             sx={{
               position: 'absolute',
               right: 0,
               color: 'black', // Set the icon color to black
             }}
           >
-            <Link to="/">
               <DoneIcon sx={{ fontSize: '2.5rem' }} />
-            </Link>
           </IconButton>
+            <Dialog open={open} onClose={handleClose}>
+                <DialogTitle>Thêm Hoàn Tất</DialogTitle>
+                <DialogContent>
+                <DialogContentText>
+                    Bạn đã thêm một khách hàng mới
+                </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                <Link to="/create-order-page">
+                    <Button onClick={handleClose} color="primary">
+                        Quay Lại
+                    </Button>
+                </Link>
+            </DialogActions>
+        </Dialog>
         </Box>
       </header>
 
