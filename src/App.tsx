@@ -11,6 +11,7 @@ import { Amplify, API, graphqlOperation } from 'aws-amplify';
 import awsconfig from './aws-exports';
 import CreateOrderPage from './pages/CreateOrderPage/CreateOrderPage';
 import CustomersList from './components/Customers/CustomersList/CustomersList';
+import AddNewCustomer from './pages/AddNewCustomer/AddNewCustomer';
 
 
 Amplify.configure(awsconfig);
@@ -43,6 +44,7 @@ function App() {
           <Routes>
             <Route path="/" element={<WelcomePage />} />
             <Route path="/all-products" element={<ProductListPage />} />
+            <Route path="/add-new-customer" element={<AddNewCustomer />} />
             <Route path="/create-order-page" element={<CreateOrderPage />} />
             <Route path="/customers-page" element={<CustomersList />} />
             <Route path="/ao-dai-truyen-thong" element={<AoDaiTruyenThong />} />

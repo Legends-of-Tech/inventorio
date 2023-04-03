@@ -89,7 +89,9 @@ const HeaderCusPgSection= () => {
           position: 'absolute',
           right: 0,
         }}>
-        <AddIcon sx={{ fontSize: '2.5rem' }} />
+        <Link to="/add-new-customer">
+          <AddIcon sx={{ fontSize: '2.5rem' }} />
+        </Link>
       </IconButton>
     </Box>
         </header>
