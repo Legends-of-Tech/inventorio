@@ -56,7 +56,7 @@ const AddNewCustomer = (props: Props) => {
 
       <div className="flex justify-center items-center min-h-screen">
         <section className="w-full max-w-xl px-10 py-6">
-          <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 mb-36">
+          <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <div className="sm:col-span-3">
                 <label htmlFor="first-name" className="block text-lg font-medium leading-6 text-gray-900">
                     Tên Khách Hàng
@@ -87,7 +87,7 @@ const AddNewCustomer = (props: Props) => {
                 </div>
             </div>
 
-                <div className="sm:col-span-4">
+            <div className="sm:col-span-4">
                 <label htmlFor="email" className="block text-lg font-medium leading-6 text-gray-900">
                     Địa Chỉ
                 </label>
@@ -102,7 +102,7 @@ const AddNewCustomer = (props: Props) => {
                 </div>
             </div>
 
-                <div className="sm:col-span-3">
+                <div className="sm:col-span-5">
                 <label htmlFor="country" className="block text-lg font-medium leading-6 text-gray-900">
                     Tài Khoản Ngân Hàng
                 </label>
@@ -112,31 +112,48 @@ const AddNewCustomer = (props: Props) => {
                     name="email"
                     type="email"
                     autoComplete="email"
+                    placeholder="   Người Thụ Hưởng"
                     className="block w-full rounded-md py-1.5 shadow-sm ring-1 ring-inset placeholder:text-gray-400 border border-gray-300"
                     />
                 </div>
+                <div className="flex items-center gap-4">
+                    <div className="mt-2 flex-1">
+                        <input
+                        id="Số Tài Khoản"
+                        name="Số Tài Khoản"
+                        type="Số Tài Khoản"
+                        autoComplete="Số Tài Khoản"
+                        placeholder="   Số Tài Khoản"
+                        className="block w-full rounded-md py-1.5 shadow-sm ring-1 ring-inset placeholder:text-gray-400 border border-gray-300"
+                        />
+                    </div>
+                    <div className="mt-2 flex-1">
+                        <select
+                        id="country"
+                        name="country"
+                        autoComplete="country-name"
+                        className="block w-full rounded-md py-1.5 shadow-sm ring-1 ring-inset placeholder:text-gray-400 border border-gray-300">
+                        <option disabled selected className="text-color">Ngân Hàng</option>
+                        <option>Sacombank</option>
+                        <option>Vietcom Bank</option>
+                        <option>MB Bank</option>
+                        </select>
+                    </div>
+                </div>  
+            </div>
+            <div className="sm:col-span-6">
+                <label htmlFor="email" className="block text-lg font-medium leading-6 text-gray-900">
+                    Ghi Chú
+                </label>
                 <div className="mt-2">
                     <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    className="block w-full rounded-md py-1.5 shadow-sm ring-1 ring-inset placeholder:text-gray-400 border border-gray-300"
+                        id="email"
+                        name="email"
+                        type="email"
+                        autoComplete="email"
+                        className="block w-full rounded-lg py-10 shadow-sm ring-1 ring-inset placeholder:text-gray-400 border border-gray-300"
                     />
                 </div>
-                <div className="mt-2">
-                    <select
-                    id="country"
-                    name="country"
-                    autoComplete="country-name"
-                    className="block w-full rounded-md py-1.5 shadow-sm ring-1 ring-inset placeholder:text-gray-400 border border-gray-300"
-                    >
-                    <option>Sacombank</option>
-                    <option>Vietcom Bank</option>
-                    <option>MB Bank</option>
-                    </select>
-                </div>
-
             </div>
           </div>
         </section>
