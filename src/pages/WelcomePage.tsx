@@ -1,7 +1,6 @@
 import '../App.css';
-import { Fragment, useEffect, useState } from 'react'
-import { API, DataStore } from 'aws-amplify';
-import { GraphQLQuery, GRAPHQL_AUTH_MODE } from '@aws-amplify/api';
+import {  useEffect, useState } from 'react'
+import {  DataStore } from 'aws-amplify';
 import { Fab} from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import { Link } from 'react-router-dom';
@@ -27,6 +26,19 @@ function WelcomePage() {
       console.log('Error saving post', error);
     }
   }
+
+  const fetchProducts = async () => {
+      const products = await DataStore.query(Product);
+    console.log({products})
+  }
+
+  useEffect(() => {
+    try {
+      fetchProducts();
+    } catch (error) {
+      console.log('Error retrieving posts', error);
+    }
+  }, [])
 
   return (
     <>

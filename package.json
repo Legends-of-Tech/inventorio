@@ -10,7 +10,7 @@
   "dependencies": {
     "@aws-amplify/api": "^5.0.16",
     "@aws-amplify/datastore": "^4.1.5",
-    "@aws-amplify/ui-react": "^4.3.9",
+    "@aws-amplify/ui-react": "^4.4.3",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@fontsource/roboto": "^4.5.8",

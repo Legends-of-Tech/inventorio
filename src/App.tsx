@@ -7,7 +7,7 @@ import QuanAoDai from './components/Products/QuanAoDai/QuanAoDai';
 import VayAoDai from './components/Products/VayAoDai/VayAoDai';
 import ProductListPage from './pages/ProductsListPage';
 import WelcomePage from './pages/WelcomePage';
-import { Amplify, API, graphqlOperation } from 'aws-amplify';
+import { Amplify } from 'aws-amplify';
 import awsconfig from './aws-exports';
 import CreateOrderPage from './pages/CreateOrderPage';
 import CustomersList from './components/Customers/CustomersList/CustomersList';
