@@ -11,17 +11,16 @@ function classNames(...classes: any[]) {
 }
 
 function WelcomePage() {
-  const [products, setProducts] = useState<any[]>();
+  const [products, setProducts] = useState<Product[]>();
 
   const onAddedProduct = async () => {
     try {
-      const post = await DataStore.save(
+      const prod = await DataStore.save(
         new Product({
           name: 'test',
-          imageUrl: 'http://cdn.shopify.com/s/files/1/0406/6066/4485/products/LUCI3213-3_grande.jpg?v=1601353391'
+          imageUrl: 'http://cdn.shopify.com/s/files/1/0406/6066/4485/products/LUCI3213-3_grande.jpg?v=1601353391',
         })
       );
-      console.log('Post saved successfully!', post);
     } catch (error) {
       console.log('Error saving post', error);
     }
@@ -29,8 +28,10 @@ function WelcomePage() {
 
   const fetchProducts = async () => {
       const products = await DataStore.query(Product);
-    console.log({products})
+      console.log({products})
+      setProducts([...products])
   }
+
 
   useEffect(() => {
     try {
@@ -43,7 +44,6 @@ function WelcomePage() {
   return (
     <>
       <div className="min-h-full">
-        {products?.map(prod => (<h1>{prod["name"]}</h1>))}
         <div className="min-h-full ">
           <header className="top-section py-3 px-12 w-full max-w-screen-lg flex items-center justify-center border-b border-black">
             <h1 className="text-3xl font-bold tracking-tight text-gray-900">
@@ -56,6 +56,7 @@ function WelcomePage() {
             <div className="px-38 py-40 sm:px-0">
               <div className="flex justify-center">
                 <button className='btn btn-primary' onClick={onAddedProduct}>Add Product</button>
+                <button className='btn btn-primary' onClick={() => {DataStore.clear()}}>Clear Products</button>
                 <Link to="/create-order-page">
                 <Fab variant="extended" size="large" color="primary">
                     <AddIcon sx={{ mr: 1 }} />
