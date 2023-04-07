@@ -1,7 +1,5 @@
 import { Disclosure} from '@headlessui/react'
-import SearchBox from '../search-box'
 import { Link } from 'react-router-dom'
-
 
 const TopNavBar = () => {
   return (
@@ -10,7 +8,6 @@ const TopNavBar = () => {
             <div className="relative flex h-16 items-center justify-between">
             <Link to='/'>
                 <div className="flex flex-shrink-0 items-center" >
-
                     <img
                         style={{marginLeft: '8px'}}
                         className="block h-8 w-auto lg:hidden gap-[2.75rem]"
@@ -18,7 +15,7 @@ const TopNavBar = () => {
                         alt="Your Company"
                     />
                 </div>
-              </Link>
+            </Link>
               {/* <div style={{marginRight: '8px'}}>
                 <SearchBox/>
               </div> */}

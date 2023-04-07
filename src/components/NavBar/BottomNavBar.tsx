@@ -1,19 +1,31 @@
 import { faHouse, faBoxArchive, faUser } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import NavItem from './NavItem/NavItem';
-
-
+import NavItem from "./NavItem/NavItem";
+import { useLocation } from 'react-router-dom';
 
 type Props = {
     className: string;
 }
 
-const NavBar = ({className}: Props) => (
-  <div className={`${className} d-flex`}>
-    <NavItem icon={faHouse} size="2x" path="/"/>
-    <NavItem icon={faBoxArchive} size="2x" path="/all-products"/>
-    <NavItem icon={faUser} size="2x"path="/customers-profile"/>
-  </div>
-)
+const BottomNavBar = ({className}: Props) => {
+  const location = useLocation();
 
-export default NavBar
+  const isRender = () => {
+    const excludedPaths = ['/create-order-page', '/customers-page', '/all-products'];
+
+    if (excludedPaths.includes(location.pathname)) {
+      return false;
+    }
+
+    return true;
+  };
+  return isRender() ? (
+    <div className={`${className} d-flex`}>
+      <NavItem icon={faHouse} size="2x" path="/"/>
+      <NavItem icon={faBoxArchive} size="2x" path='/all-products'/>
+      <NavItem icon={faUser} size="2x"path="/customers-profile"/>
+    </div>
+  ) : null;
+}
+
+
+export default BottomNavBar

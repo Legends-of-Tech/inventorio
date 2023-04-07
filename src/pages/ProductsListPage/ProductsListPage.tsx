@@ -1,6 +1,6 @@
 import { Divider } from '@mui/material';
 import { Outlet } from 'react-router-dom';
-import NavBar from '../../components/NavBar/BottomNavBar';
+import BottomNavBar from '../../components/NavBar/BottomNavBar';
 import TopNavBar from '../../components/NavBar/TopNavBar';
 import ProductList from "../../components/ProductsList/AllProducts"
 import SearchBox from '../../components/search-box';
