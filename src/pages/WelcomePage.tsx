@@ -15,30 +15,11 @@ function classNames(...classes: any[]) {
 }
 
 function WelcomePage() {
-  const [products, setProducts] = useState<any[]>();
-
-  useEffect(() => {
-
-    // declare the data fetching function
-    const fetchData = async () => {
-      const allProducts = await API.graphql<GraphQLQuery<ListProductsQuery>>(
-        { query: queries.listProducts,
-        }
-      );
-      setProducts([...allProducts.data!.listProducts!.items])
-      console.log({allProducts});
-    };
-    // call the function
-    fetchData()
-    // make sure to catch any error
-    .catch(console.error);
-  }, []);
-
+  
   return (
     <>
 
       <div className="min-h-full">
-        {products?.map(prod => (<h1>{prod["name"]}</h1>))}
         <div className="min-h-full ">
           <header className="top-section py-3 px-12 w-full max-w-screen-lg flex items-center justify-center border-b border-black">
             <h1 className="text-3xl font-bold tracking-tight text-gray-900">
