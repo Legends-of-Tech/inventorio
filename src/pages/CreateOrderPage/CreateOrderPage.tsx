@@ -8,8 +8,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
-import CustomersList from '../../components/Customers/CustomersList/CustomersList';
-import HeaderCusPgSection from '../../components/Customers/Header/HeaderCusPgSection';
+import HeaderCustomerListModal from '../../components/Customers/Header/HeaderCustomerListModal';
 import AlphabetSortSection from '../../components/Customers/AlphabetSortSection';
 import CustomerDetailSection from '../../components/Customers/CustomerDetailSection';
 import CustomerInfoSection from '../../components/Customers/CustomerInfoSection';
@@ -93,11 +92,11 @@ const CreateOrderPage = () => {
             }}
           >
             <div className="CustomersModal">
+              <HeaderCustomerListModal/>
               <div
                 className="CustomerInfo"
                 onClick={() => handleCustomerSelection()}
               >
-                <HeaderCusPgSection />
                 <AlphabetSortSection label={'A'} />
                 <CustomerDetailSection name={'Anh Hai'} PhoneNumber={'0422909791'} />
               </div>

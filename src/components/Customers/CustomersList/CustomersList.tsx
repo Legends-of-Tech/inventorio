@@ -1,6 +1,6 @@
 import React from 'react';
 import AlphabetSortSection from '../AlphabetSortSection';
-import HeaderCusPgSection from '../Header/HeaderCusPgSection';
+import HeaderCusPgSection from '../Header/HeaderCustomerListModal';
 import CustomerDetailSection from '../CustomerDetailSection';
 import './CustomersList.css';
 import {Link} from 'react-router-dom';

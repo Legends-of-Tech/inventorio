@@ -45,7 +45,7 @@ const AddNewCustomer = (props: Props) => {
               color: 'black', // Set the icon color to black
             }}
           >
-            <Link to="/create-order-page">
+            <Link to="/">
               <ArrowBackIcon sx={{ fontSize: '2rem' }} />
             </Link>
           </IconButton>
