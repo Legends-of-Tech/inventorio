@@ -29,8 +29,9 @@ const AddNewCustomer = (props: Props) => {
       setOpen(false);
     };
   return (
-    <div className="min-h-full">
-      <header className="top-section py-3 px-12 w-full max-w-screen-lg flex items-center justify-center border-b border-black">
+    <div className="min-h-full mt-[-50px]">
+      {/* this is a code for border line: justify-center border-b border-black */}
+      <header className="top-section mt-8 py-0 px-12 w-full max-w-screen-lg flex items-center "> 
         <Box
           sx={{
             display: 'flex',
@@ -49,8 +50,8 @@ const AddNewCustomer = (props: Props) => {
           <GoBackIcon/>
           </IconButton>
           <h1
-            className="text-3xl font-bold tracking-tight text-gray-900 "
-            style={{ textAlign: 'center', width: '100%' }} // Center the text
+            className=" font-bold tracking-tight text-gray-900"
+            style={{ textAlign: 'center', width: '100%', fontSize: '27px' }} // Center the text
           >
             Thêm Khách Hàng
           </h1>
@@ -62,7 +63,7 @@ const AddNewCustomer = (props: Props) => {
               color: 'black', // Set the icon color to black
             }}
           >
-              <DoneIcon sx={{ fontSize: '2.5rem' }} />
+              <DoneIcon sx={{ fontSize: '2rem' }} />
           </IconButton>
             <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>Thêm Hoàn Tất</DialogTitle>
@@ -72,7 +73,7 @@ const AddNewCustomer = (props: Props) => {
                 </DialogContentText>
                 </DialogContent>
                 <DialogActions>
-                <Link to="/create-order-page">
+                <Link to="/">
                     <Button onClick={handleClose} color="primary">
                         Quay Lại
                     </Button>
@@ -83,8 +84,8 @@ const AddNewCustomer = (props: Props) => {
       </header>
 
       <div className="flex justify-center items-center min-h-screen">
-        <section className="w-full max-w-xl px-10 py-6">
-          <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+        <section className="w-full max-w-xl px-1 py-6">
+          <div className=" grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <div className="sm:col-span-3">
                 <label htmlFor="first-name" className="block text-lg font-medium leading-6 text-gray-900">
                     Tên Khách Hàng

@@ -7,7 +7,7 @@ type Props = {}
 const GoBackIcon = (props: Props) => {
     return (
         <ArrowBackIcon
-          sx={{ fontSize: '2rem' }}
+          sx={{ fontSize: '1.8rem' }}
           onClick={() => {
             window.history.back();
           }}

@@ -119,7 +119,22 @@ const HeaderCustomerListModal= () => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box
+            sx={{
+              marginTop: '-20px', 
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              bgcolor: 'white',
+              width: '90%', // or any desired width (e.g., '500px')
+              height: '90%', // or any desired height (e.g., '600px')
+              boxShadow: 24,
+              borderRadius: 1,
+              p: 4,
+              overflowY: 'auto',
+          }}
+          >
           <AddNewCustomer/>
         </Box>
       </Modal>
