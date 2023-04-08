@@ -10,6 +10,7 @@ import {Link} from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import AddNewCustomer from '../../../pages/AddNewCustomer/AddNewCustomer';
+import GoBackIcon from '../../GoBackIcon';
 
 
 
@@ -83,9 +84,7 @@ const HeaderCustomerListModal= () => {
           position: 'absolute',
           left: 0,
         }}>
-        <Link to='/'>
-          <ArrowBackIcon sx={{ fontSize: '2rem' }} />
-        </Link>
+          <GoBackIcon/>
       </IconButton>
       <Box
         sx={{

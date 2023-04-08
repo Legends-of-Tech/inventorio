@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+
 import AddIcon from '@mui/icons-material/Add';
 import { Link } from 'react-router-dom';
 import DoneIcon from '@mui/icons-material/Done';
@@ -14,6 +14,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogActions from '@mui/material/DialogActions';
 import Button from '@mui/material/Button';
+import GoBackIcon from '../../components/GoBackIcon';
 
 type Props = {};
 
@@ -45,9 +46,7 @@ const AddNewCustomer = (props: Props) => {
               color: 'black', // Set the icon color to black
             }}
           >
-            <Link to="/">
-              <ArrowBackIcon sx={{ fontSize: '2rem' }} />
-            </Link>
+          <GoBackIcon/>
           </IconButton>
           <h1
             className="text-3xl font-bold tracking-tight text-gray-900 "

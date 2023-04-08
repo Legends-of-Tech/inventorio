@@ -3,7 +3,6 @@ import { Outlet } from 'react-router-dom';
 import BottomNavBar from '../../components/NavBar/BottomNavBar';
 import TopNavBar from '../../components/NavBar/TopNavBar';
 import ProductList from "../../components/ProductsList/AllProducts"
-import SearchBox from '../../components/search-box';
 import TagChipItem from '../../components/TagChip/TagChipItem/TagChipItem';
 import Grid from '@mui/material/Grid';
 import DropBoxSection from '../../components/DropBoxSection/DropBoxSection';
