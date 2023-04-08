@@ -11,7 +11,7 @@ import Box from '@mui/material/Box';
 import HeaderCustomerListModal from '../../components/Customers/Header/HeaderCustomerListModal';
 import AlphabetSortSection from '../../components/Customers/AlphabetSortSection';
 import CustomerDetailSection from '../../components/Customers/CustomerDetailSection';
-import CustomerInfoSection from '../../components/Customers/CustomerInfoSection';
+import AddProductSection from '../../components/Customers/AddProductSection';
 
 
 
@@ -69,7 +69,7 @@ const CreateOrderPage = () => {
             </Fab>
           </section>
         )}
-         {showCustomerInfo && <CustomerInfoSection/>}
+         {showCustomerInfo && <AddProductSection/>}
          <Modal
           open={open}
           onClose={handleClose}

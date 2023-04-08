@@ -3,7 +3,7 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 import AddIcon from '@mui/icons-material/Add';
 
-const CustomerInfoSection = () => {
+const AddProductSection = () => {
   return (
     <div>
       <div className="fixed top-20 left-0 right-0 z-10 flex justify-center mt-14">
@@ -23,12 +23,12 @@ const CustomerInfoSection = () => {
           </div>
         </section>
       </div>
-      <section className="product-section flex items-center justify-center min-h-screen transform -translate-y-10">
+      <section className="product-section flex items-center justify-center min-h-screen transform -translate-y-10" style={{ position: 'fixed', top: '47%', left: '50%', transform: 'translate(-50%, -50%)' }}>
         <div className="flex flex-col items-center">
           <h1 className="text-3xl font-bold tracking-tight text-gray-900">
             Sản Phẩm
           </h1>
-          <Link to="/all-products" style={{ marginTop: '4rem' }}>
+          <Link to="/all-products" style={{ marginTop: '4.5rem' }}>
             <Fab variant="extended" size="large" color="primary">
               <AddIcon sx={{ mr: 1 }} />
               Thêm Sản Phẩm 
@@ -40,7 +40,7 @@ const CustomerInfoSection = () => {
   );
 };
 
-export default CustomerInfoSection;
+export default AddProductSection;
 
 
 
