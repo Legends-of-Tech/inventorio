@@ -14,6 +14,7 @@ import GoBackIcon from '../../GoBackIcon';
 
 
 
+
 const style = {
   position: 'absolute' as 'absolute',
   top: '50%',
@@ -64,7 +65,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const HeaderCustomerListModal= () => {
+
+
+const HeaderCustomerListModal = ({ onAddCustomer }) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -105,7 +108,7 @@ const HeaderCustomerListModal= () => {
         </Search>
       </Box>
       <IconButton
-        onClick={handleOpen}
+        onClick={onAddCustomer}
         sx={{
           position: 'absolute',
           right: 0,

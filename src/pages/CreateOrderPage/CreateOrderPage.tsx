@@ -12,6 +12,8 @@ import HeaderCustomerListModal from '../../components/Customers/Header/HeaderCus
 import AlphabetSortSection from '../../components/Customers/AlphabetSortSection';
 import CustomerDetailSection from '../../components/Customers/CustomerDetailSection';
 import AddProductSection from '../../components/Customers/AddProductSection';
+import AddNewCustomer from '../AddNewCustomer/AddNewCustomer';
+
 
 
 
@@ -19,6 +21,7 @@ const CreateOrderPage = () => {
   const [open, setOpen] = React.useState(false);
   const [showFab, setShowFab] = React.useState(true);
   const [showCustomerInfo, setShowCustomerInfo] = React.useState(false);
+  const [showAddCustomer, setShowAddCustomer] = React.useState(false);
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -28,6 +31,11 @@ const CreateOrderPage = () => {
     setShowFab(false);
     setShowCustomerInfo(true);
   };
+
+  const handleAddCustomer = () => {
+    setShowAddCustomer(true);
+  };
+  
   return (
     <div className="min-h-full">
       <div className="content flex flex-col min-h-screen">
@@ -78,13 +86,14 @@ const CreateOrderPage = () => {
         >
           <Box
             sx={{
+              marginTop: '-20px', 
               position: 'absolute',
               top: '50%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
               bgcolor: 'white',
-              width: '80%', // or any desired width (e.g., '500px')
-              height: '80%', // or any desired height (e.g., '600px')
+              width: '90%', // or any desired width (e.g., '500px')
+              height: '90%', // or any desired height (e.g., '600px')
               boxShadow: 24,
               borderRadius: 1,
               p: 4,
@@ -92,14 +101,19 @@ const CreateOrderPage = () => {
             }}
           >
             <div className="CustomersModal">
-              <HeaderCustomerListModal/>
-              <div
-                className="CustomerInfo"
-                onClick={() => handleCustomerSelection()}
-              >
-                <AlphabetSortSection label={'A'} />
-                <CustomerDetailSection name={'Anh Hai'} PhoneNumber={'0422909791'} />
-              </div>
+              {!showAddCustomer && (
+                <>
+                  <HeaderCustomerListModal onAddCustomer={handleAddCustomer} />
+                  <div
+                    className="CustomerInfo"
+                    onClick={() => handleCustomerSelection()}
+                  >
+                    <AlphabetSortSection label={"A"} />
+                    <CustomerDetailSection name={"Anh Hai"} PhoneNumber={"0422909791"} />
+                  </div>
+                </>
+              )}
+              {showAddCustomer && <AddNewCustomer />}
             </div>
           </Box>
         </Modal>

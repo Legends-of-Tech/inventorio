@@ -29,7 +29,7 @@ const AddNewCustomer = (props: Props) => {
       setOpen(false);
     };
   return (
-    <div className="min-h-full mt-[-50px]">
+    <div className="min-h-full mt-[-15px]">
       {/* this is a code for border line: justify-center border-b border-black */}
       <header className="top-section mt-8 py-0 px-12 w-full max-w-screen-lg flex items-center "> 
         <Box
@@ -84,7 +84,7 @@ const AddNewCustomer = (props: Props) => {
       </header>
 
       <div className="flex justify-center items-center min-h-screen">
-        <section className="w-full max-w-xl px-1 py-6">
+        <section className="max-w-sm px-4 py-2">
           <div className=" grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <div className="sm:col-span-3">
                 <label htmlFor="first-name" className="block text-lg font-medium leading-6 text-gray-900">
@@ -131,7 +131,7 @@ const AddNewCustomer = (props: Props) => {
                 </div>
             </div>
 
-                <div className="sm:col-span-5">
+                <div className="sm:col-span-4">
                 <label htmlFor="country" className="block text-lg font-medium leading-6 text-gray-900">
                     Tài Khoản Ngân Hàng
                 </label>
