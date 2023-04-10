@@ -1,8 +1,5 @@
 import { Divider } from '@mui/material';
 import { Outlet } from 'react-router-dom';
-import BottomNavBar from '../../components/NavBar/BottomNavBar';
-import TopNavBar from '../../components/NavBar/TopNavBar';
-import ProductList from "../../components/ProductsList/AllProducts"
 import TagChipItem from '../../components/TagChip/TagChipItem/TagChipItem';
 import Grid from '@mui/material/Grid';
 import DropBoxSection from '../../components/DropBoxSection/DropBoxSection';
@@ -13,16 +10,15 @@ function ProductsListPage() {
     return(
     <>
         <header >
-          <div className="mx-auto max-w-7xl py-12 px-8 sm:px-6 lg:px-8"></div>
+          <div className="mx-auto max-w-7xl py-11 px-8 sm:px-6 lg:px-8"></div>
         </header>
         <DropBoxSection/>
-        <br/>
-        <div className='flex justify-center'>
+        {/* <div className='flex justify-center'>
           <div style={{marginRight: '10px'}}>
             <TagChipItem  label="Áo Dài Trơn" path='/'/>
           </div>
           <TagChipItem label="Áo Dài Có Họa Tiết" path='/'/>
-        </div>
+        </div> */}
         <AllProducts header={'Tất Cả Sản Phẩm'}/>
         <Outlet />
     </>
