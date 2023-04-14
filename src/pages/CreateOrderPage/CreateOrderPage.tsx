@@ -39,7 +39,7 @@ const CreateOrderPage = () => {
   return (
     <div className="min-h-full">
       <div className="content flex flex-col min-h-screen">
-        <header className="top-section py-3 px-12 w-full max-w-screen-lg flex items-center justify-center border-b border-black">
+        {/* <header className="top-section py-3 px-12 w-full max-w-screen-lg flex items-center justify-center border-b border-black">
           <div className="flex items-center absolute top-4 left-5">
             <Link to="/">
               <ArrowBackIcon sx={{ fontSize: '1.6rem' }} />
@@ -48,7 +48,7 @@ const CreateOrderPage = () => {
           <h1 className="text-3xl font-bold tracking-tight text-gray-900 mt-3.5">
             Tạo Đơn Hàng
           </h1>
-        </header>
+        </header> */}
         
 
         {showFab && (

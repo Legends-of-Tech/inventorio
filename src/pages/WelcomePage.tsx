@@ -21,11 +21,11 @@ function WelcomePage() {
 
       <div className="min-h-full">
         <div className="min-h-full ">
-          <header className="top-section py-3 px-12 w-full max-w-screen-lg flex items-center justify-center border-b border-black">
+          {/* <header className="top-section py-3 px-12 w-full max-w-screen-lg flex items-center justify-center border-b border-black">
             <h1 className="text-3xl font-bold tracking-tight text-gray-900">
               Đơn Hàng
             </h1>
-          </header>
+          </header> */}
         </div>
         <main>
           <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">

@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="relative h-screen w-100">
       <BrowserRouter>
-        <TopNavBar />
+        <TopNavBar header={"Đơn Hàng"} />
         <main className="mb-auto">
           <Routes>
             <Route path="/" element={<WelcomePage />} />
