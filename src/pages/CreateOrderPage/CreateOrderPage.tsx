@@ -14,6 +14,7 @@ import CustomerDetailSection from '../../components/Customers/CustomerDetailSect
 import AddProductSection from '../../components/Customers/AddProductSection';
 import AddNewCustomer from '../AddNewCustomer/AddNewCustomer';
 import SelectCustomerFab from '../../components/CreateOrderPageComponents/SelectCustomerFab';
+import CustomerSelectionModal from '../../components/CreateOrderPageComponents/CustomerSelectionModal';
 
 
 
@@ -41,47 +42,15 @@ const CreateOrderPage = () => {
       <div className="content flex flex-col min-h-screen">
 
         {showFab && <SelectCustomerFab onClick={handleOpen} />}
-        
-         {showCustomerInfo && <AddProductSection/>}
-         <Modal
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-        >
-          <Box
-            sx={{
-              marginTop: '-20px', 
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              bgcolor: 'white',
-              width: '90%', // or any desired width (e.g., '500px')
-              height: '90%', // or any desired height (e.g., '600px')
-              boxShadow: 24,
-              borderRadius: 1,
-              p: 4,
-              overflowY: 'auto',
-            }}
-          >
-            <div className="CustomersModal">
-              {!showAddCustomer && (
-                <>
-                  <HeaderCustomerListModal onAddCustomer={handleAddCustomer} />
-                  <div
-                    className="CustomerInfo"
-                    onClick={() => handleCustomerSelection()}
-                  >
-                    <AlphabetSortSection label={"A"} />
-                    <CustomerDetailSection name={"Anh Hai"} PhoneNumber={"0422909791"} />
-                  </div>
-                </>
-              )}
-              {showAddCustomer && <AddNewCustomer />}
-            </div>
-          </Box>
-        </Modal>
+        {showCustomerInfo && <AddProductSection/>}
+        <CustomerSelectionModal
+        open={open}
+        onClose={handleClose}
+        showAddCustomer={showAddCustomer}
+        handleCustomerSelection={handleCustomerSelection}
+        handleAddCustomer={handleAddCustomer}
+      />
+
       </div>
 
 
