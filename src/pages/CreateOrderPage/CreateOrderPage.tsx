@@ -13,7 +13,7 @@ import AlphabetSortSection from '../../components/Customers/AlphabetSortSection'
 import CustomerDetailSection from '../../components/Customers/CustomerDetailSection';
 import AddProductSection from '../../components/Customers/AddProductSection';
 import AddNewCustomer from '../AddNewCustomer/AddNewCustomer';
-
+import SelectCustomerFab from '../../components/CreateOrderPageComponents/SelectCustomerFab';
 
 
 
@@ -39,44 +39,9 @@ const CreateOrderPage = () => {
   return (
     <div className="min-h-full">
       <div className="content flex flex-col min-h-screen">
-        {/* <header className="top-section py-3 px-12 w-full max-w-screen-lg flex items-center justify-center border-b border-black">
-          <div className="flex items-center absolute top-4 left-5">
-            <Link to="/">
-              <ArrowBackIcon sx={{ fontSize: '1.6rem' }} />
-            </Link>
-          </div>
-          <h1 className="text-3xl font-bold tracking-tight text-gray-900 mt-3.5">
-            Tạo Đơn Hàng
-          </h1>
-        </header> */}
-        
 
-        {showFab && (
-          <section className="fixed top-40 left-0 right-0 z-10 flex justify-center mt-5">
-            <Fab
-              onClick={handleOpen}
-              variant="extended"
-              size="large"
-              sx={{
-                backgroundColor: 'white',
-                color: '#90A4AE',
-                border: '1.5px solid #90A4AE',
-              }}
-            >
-              <AccountCircleIcon sx={{ mr: 1, color: '#90A4AE', fontSize: '2rem' }} />
-              <span
-                style={{
-                  fontSize: '1.2rem',
-                  fontFamily: 'Arial, sans-serif',
-                  fontWeight: 500,
-                  textTransform: 'capitalize',
-                }}
-              >
-                Chọn Khách Hàng
-              </span>
-            </Fab>
-          </section>
-        )}
+        {showFab && <SelectCustomerFab onClick={handleOpen} />}
+        
          {showCustomerInfo && <AddProductSection/>}
          <Modal
           open={open}
@@ -154,3 +119,14 @@ const CreateOrderPage = () => {
 
 export default CreateOrderPage
 
+
+        {/* <header className="top-section py-3 px-12 w-full max-w-screen-lg flex items-center justify-center border-b border-black">
+          <div className="flex items-center absolute top-4 left-5">
+            <Link to="/">
+              <ArrowBackIcon sx={{ fontSize: '1.6rem' }} />
+            </Link>
+          </div>
+          <h1 className="text-3xl font-bold tracking-tight text-gray-900 mt-3.5">
+            Tạo Đơn Hàng
+          </h1>
+        </header> */}
