@@ -1,18 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import { ShoppingCartRounded } from '@mui/icons-material';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
-import { Fab } from '@mui/material';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import Modal from '@mui/material/Modal';
-import Box from '@mui/material/Box';
-import HeaderCustomerListModal from '../../components/Customers/Header/HeaderCustomerListModal';
-import AlphabetSortSection from '../../components/Customers/AlphabetSortSection';
-import CustomerDetailSection from '../../components/Customers/CustomerDetailSection';
 import AddProductSection from '../../components/Customers/AddProductSection';
-import AddNewCustomer from '../AddNewCustomer/AddNewCustomer';
 import SelectCustomerFab from '../../components/CreateOrderPageComponents/SelectCustomerFab';
 import CustomerSelectionModal from '../../components/CreateOrderPageComponents/CustomerSelectionModal';
 
@@ -41,24 +31,25 @@ const CreateOrderPage = () => {
     <div className="min-h-full">
       <div className="content flex flex-col min-h-screen">
 
+        {/* This is a select customer Fab, click on to open the CustomerSelectionModal and will disappear after choosing the selected customer. */}
         {showFab && <SelectCustomerFab onClick={handleOpen} />}
+
+        {/* This function will display the detail of the selected customer and display a add product button  */}
         {showCustomerInfo && <AddProductSection/>}
+
+
+        {/* This a modal for selecting the customer for the order and also has a add new customer form   */}
         <CustomerSelectionModal
         open={open}
         onClose={handleClose}
         showAddCustomer={showAddCustomer}
         handleCustomerSelection={handleCustomerSelection}
         handleAddCustomer={handleAddCustomer}
-      />
-
+        />
       </div>
 
 
-
-
-
-
-
+        {/* This is a total order section and complete order button */}
         <div className="sticky-bottom">
           <div className="flex items-center justify-between w-full mb-2.5">
             <div className="flex items-center ml-5">
