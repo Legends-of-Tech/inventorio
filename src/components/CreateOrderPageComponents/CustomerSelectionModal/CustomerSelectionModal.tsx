@@ -1,10 +1,11 @@
 import React from 'react';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
-import HeaderCustomerListModal from '../../components/Customers/Header/HeaderCustomerListModal';
-import AlphabetSortSection from '../../components/Customers/AlphabetSortSection';
-import CustomerDetailSection from '../../components/Customers/CustomerDetailSection';
-import AddNewCustomer from '../../pages/AddNewCustomer/AddNewCustomer';
+import HeaderCustomerListModal from '../../Customers/Header/HeaderCustomerListModal';
+import AlphabetSortSection from '../../Customers/AlphabetSortSection';
+import CustomerDetailSection from '../../Customers/CustomerDetailSection';
+import AddNewCustomer from '../../../pages/AddNewCustomer/AddNewCustomer';
+import './CustomerSelectionModal.css'
 
 
 interface CustomerSelectionModalProps {

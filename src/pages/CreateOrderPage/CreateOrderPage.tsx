@@ -4,7 +4,7 @@ import { ShoppingCartRounded } from '@mui/icons-material';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import AddProductSection from '../../components/Customers/AddProductSection';
 import SelectCustomerFab from '../../components/CreateOrderPageComponents/SelectCustomerFab';
-import CustomerSelectionModal from '../../components/CreateOrderPageComponents/CustomerSelectionModal';
+import CustomerSelectionModal from '../../components/CreateOrderPageComponents/CustomerSelectionModal/CustomerSelectionModal';
 
 
 
