@@ -68,10 +68,7 @@ const CustomerSelectionModal: React.FC<CustomerSelectionModalProps> = ({
           )}
           {showAddCustomer && <AddNewCustomer />}
         </div>
-
       </Box>
-
-     
     </Modal>
     
   );
