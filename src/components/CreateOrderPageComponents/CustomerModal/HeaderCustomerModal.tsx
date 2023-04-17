@@ -9,8 +9,10 @@ import AddIcon from '@mui/icons-material/Add';
 import {Link} from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import AddNewCustomer from '../../pages/AddNewCustomer/AddNewCustomer';
-import GoBackIcon from '../GoBackIcon';
+import AddNewCustomer from '../../../pages/AddNewCustomer/AddNewCustomer';
+import GoBackIcon from '../../GoBackIcon';
+
+
 
 
 
@@ -78,6 +80,29 @@ const HeaderCustomerListModal: React.FC<HeaderCustomerListModalProps> = ({ onAdd
 
     return (
       <div className="min-h-full">
+          <Box
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexGrow: 1,
+              width: '100%',
+              height: '68px', // Increase the height value as desired
+              backgroundColor: 'rgb(147 197 253)',
+              marginTop: '-3px',
+              
+            }}
+          >
+            <Typography
+              variant="h6"
+              sx={{
+                fontWeight: 'bold', // Make the text bold
+                fontSize: '28px',
+              }}
+            >
+              Chọn Khách Hàng
+            </Typography>
+          </Box>
         <header className="py-3 px-12 w-full max-w-screen-lg flex items-center justify-center">
         <Box
       sx={{
@@ -85,20 +110,18 @@ const HeaderCustomerListModal: React.FC<HeaderCustomerListModalProps> = ({ onAdd
         justifyContent: 'space-between',
         alignItems: 'center',
         width: '100%',
+        
       }}
     >
-      {/* <IconButton sx={{
-          position: 'absolute',
-          left: 0,
-        }}>
-          <GoBackIcon/>
-      </IconButton> */}
+      
       <Box
         sx={{
           display: 'flex',
-          justifyContent: 'center',
+          justifyContent: 'flex-start',
           alignItems: 'center',
           flexGrow: 1,
+          marginLeft: '-22px', // Add some margin to the left, adjust the value as needed
+          marginRight: '18px', // Add some margin to the right
         }}
       >
         <Search>
@@ -115,7 +138,8 @@ const HeaderCustomerListModal: React.FC<HeaderCustomerListModalProps> = ({ onAdd
         onClick={onAddCustomer}
         sx={{
           position: 'absolute',
-          right: 0,
+          right: 6,
+
         }}
       >
         <AddIcon sx={{ fontSize: '2.5rem' }} />
@@ -142,10 +166,10 @@ const HeaderCustomerListModal: React.FC<HeaderCustomerListModalProps> = ({ onAdd
               overflowY: 'auto',
           }}
           >
-          <AddNewCustomer/>
         </Box>
       </Modal>
     </Box>
+    
         </header>
       </div>
     );

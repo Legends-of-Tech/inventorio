@@ -1,11 +1,13 @@
 import React from 'react';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
-import HeaderCustomerListModal from '../../Customers/Header/HeaderCustomerListModal';
-import AlphabetSortSection from '../../Customers/AlphabetSortSection';
-import CustomerDetailSection from '../../Customers/CustomerDetailSection';
-import AddNewCustomer from '../../../pages/AddNewCustomer/AddNewCustomer';
+
+import AlphabetSortSection from '../AlphabetSortSection';
+import CustomerDetailSection from '../CustomerDetailSection';
+import AddNewCustomer from '../../../../pages/AddNewCustomer/AddNewCustomer';
 import './CustomerSelectionModal.css'
+import HeaderCustomerListModal from '../HeaderCustomerModal';
+import Button from '@mui/material/Button';
 
 
 interface CustomerSelectionModalProps {
@@ -52,14 +54,26 @@ const CustomerSelectionModal: React.FC<CustomerSelectionModalProps> = ({
               <HeaderCustomerListModal onAddCustomer={handleAddCustomer} />
               <div className="CustomerInfo" onClick={handleCustomerSelection}>
                 <AlphabetSortSection label={'A'} />
-                <CustomerDetailSection name={'Anh Hai'} PhoneNumber={'0422909791'} />
+                <CustomerDetailSection name={'Anh Hai'} PhoneNumber={'0422909791'}/>
+                {/* <Box
+                sx={{
+                  display: 'flex align-center',
+                  justifyContent: 'center',
+                  marginBottom: '1px', // Adjust the margin as needed
+                }}>
+                <Button variant="contained">Quay Lại</Button>
+                </Box> */}
               </div>
             </>
           )}
           {showAddCustomer && <AddNewCustomer />}
         </div>
+
       </Box>
+
+     
     </Modal>
+    
   );
 };
 

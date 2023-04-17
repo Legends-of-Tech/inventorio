@@ -2,9 +2,9 @@ import React from 'react';
 import Button from '@mui/material/Button';
 import { ShoppingCartRounded } from '@mui/icons-material';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
-import AddProductSection from '../../components/Customers/AddProductSection';
-import SelectCustomerFab from '../../components/CreateOrderPageComponents/SelectCustomerFab';
-import CustomerSelectionModal from '../../components/CreateOrderPageComponents/CustomerSelectionModal/CustomerSelectionModal';
+import AddProductSection from '../../components/CreateOrderPageComponents/AddProductModal/AddProductSection';
+import SelectCustomerFab from '../../components/CreateOrderPageComponents/CustomerModal/SelectCustomerFab';
+import CustomerSelectionModal from '../../components/CreateOrderPageComponents/CustomerModal/CustomerSelectionModal/CustomerSelectionModal';
 
 
 
