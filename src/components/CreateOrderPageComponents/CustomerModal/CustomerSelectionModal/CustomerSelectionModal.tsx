@@ -8,6 +8,8 @@ import AddNewCustomer from '../../../../pages/AddNewCustomer/AddNewCustomer';
 import './CustomerSelectionModal.css'
 import HeaderCustomerListModal from '../HeaderCustomerModal';
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
+
 
 
 interface CustomerSelectionModalProps {
@@ -55,15 +57,18 @@ const CustomerSelectionModal: React.FC<CustomerSelectionModalProps> = ({
               <div className="CustomerInfo" onClick={handleCustomerSelection}>
                 <AlphabetSortSection label={'A'} />
                 <CustomerDetailSection name={'Anh Hai'} PhoneNumber={'0422909791'}/>
-                {/* <Box
-                sx={{
-                  display: 'flex align-center',
-                  justifyContent: 'center',
-                  marginBottom: '1px', // Adjust the margin as needed
-                }}>
-                <Button variant="contained">Quay Lại</Button>
-                </Box> */}
               </div>
+                <Box
+                  sx={{
+                    display: 'flex align-center',
+                    justifyContent: 'center',
+                    marginBottom: '1px', // Adjust the margin as needed
+                    marginTop: '460px',
+                    position: 'sticky', // Added position: sticky
+                    bottom: 0, // Added bottom: 0
+                  }}>
+                  <Button variant="contained"onClick={onClose}>Quay Lại</Button>
+                </Box>
             </>
           )}
           {showAddCustomer && <AddNewCustomer />}
@@ -75,3 +80,5 @@ const CustomerSelectionModal: React.FC<CustomerSelectionModalProps> = ({
 };
 
 export default CustomerSelectionModal;
+
+
