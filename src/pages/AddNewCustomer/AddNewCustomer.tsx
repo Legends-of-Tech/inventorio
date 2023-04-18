@@ -15,6 +15,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogActions from '@mui/material/DialogActions';
 import Button from '@mui/material/Button';
 import GoBackIcon from '../../components/GoBackIcon';
+import { Typography } from '@mui/material';
 
 type Props = {};
 
@@ -31,40 +32,32 @@ const AddNewCustomer = (props: Props) => {
   return (
     <div className="min-h-full mt-[-15px]">
       {/* this is a code for border line: justify-center border-b border-black */}
-      <header className="top-section mt-8 py-0 px-12 w-full max-w-screen-lg flex items-center "> 
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            width: '100%',
-          }}
-        >
-          <IconButton
+      <Box
             sx={{
-              position: 'absolute',
-              left: 0,
-              color: 'black', // Set the icon color to black
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexGrow: 1,
+              width: '100%',
+              height: '68px', // Increase the height value as desired
+              backgroundColor: 'rgb(147 197 253)',
+              marginTop: '12px',
+              
             }}
           >
-          <GoBackIcon/>
-          </IconButton>
-          <h1
-            className=" font-bold tracking-tight text-gray-900"
-            style={{ textAlign: 'center', width: '100%', fontSize: '27px' }} // Center the text
-          >
-            Thêm Khách Hàng
-          </h1>
-          <IconButton
-            onClick={handleClickOpen}
-            sx={{
-              position: 'absolute',
-              right: 0,
-              color: 'black', // Set the icon color to black
-            }}
-          >
-              <DoneIcon sx={{ fontSize: '2rem' }} />
-          </IconButton>
+            <Typography
+              variant="h6"
+              sx={{
+                fontWeight: 'bold', // Make the text bold
+                fontSize: '28px',
+              }}
+            >
+              Chọn Khách Hàng
+            </Typography>
+          </Box>
+
+      <header className=" py-0 px-12 w-full max-w-screen-lg flex items-center "> 
+          
             <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>Thêm Hoàn Tất</DialogTitle>
                 <DialogContent>
@@ -80,11 +73,11 @@ const AddNewCustomer = (props: Props) => {
                 </Link>
             </DialogActions>
         </Dialog>
-        </Box>
+   
       </header>
 
       <div className="flex justify-center items-center min-h-screen">
-        <section className="max-w-sm px-4 py-2">
+        <section className="max-w-sm px-4 py-2 mb-32">
           <div className=" grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <div className="sm:col-span-3">
                 <label htmlFor="first-name" className="block text-lg font-medium leading-6 text-gray-900">
@@ -180,11 +173,53 @@ const AddNewCustomer = (props: Props) => {
                         name="email"
                         type="email"
                         autoComplete="email"
-                        className="block w-full rounded-lg py-10 shadow-sm ring-1 ring-inset placeholder:text-gray-400 border border-gray-300"
+                        className="block w-full rounded-lg py-6 shadow-sm ring-1 ring-inset placeholder:text-gray-400 border border-gray-300"
                     />
                 </div>
             </div>
           </div>
+          <div className="Complete&CloseButton mt-8">
+            <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              marginBottom: '1px', // Adjust the margin as needed
+              position: 'sticky', // Added position: sticky
+              bottom: 0, // Added bottom: 0
+            }}
+          >
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+            <Button
+              variant="contained"
+              onClick={handleClickOpen}
+              sx={{
+                backgroundColor: '#D9D9D9', // Change the button color
+                color: '#000000' // Change the text color
+              }}
+            >
+              Quay Lại
+            </Button>
+            </Box>
+
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <Button variant="contained" onClick={handleClickOpen}>
+                Hoàn Tất
+              </Button>
+            </Box>
+          </Box>
+        </div>
         </section>
       </div>
     </div>
@@ -192,3 +227,5 @@ const AddNewCustomer = (props: Props) => {
 };
 
 export default AddNewCustomer;
+
+// onClick={handleClickOpen}
