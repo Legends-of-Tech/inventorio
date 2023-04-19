@@ -6,14 +6,14 @@
 
 - Amplify CLI
 
-### Start App
+### 1. Start App
 
 ```ps1
 pnpm i
 pnpm run dev
 ```
 
-### Start mock server
+### 2. Start mock server
 
 ```ps1
 amplify mock api
