@@ -3,7 +3,7 @@ import BottomNavBar from './components/NavBar/BottomNavBar';
 import TopNavBar from './components/NavBar/TopNavBar';
 import ProductListPage from './pages/ProductsListPage/ProductsListPage';
 import WelcomePage from './pages/WelcomePage';
-import { Amplify, API, graphqlOperation } from 'aws-amplify';
+import { Amplify } from 'aws-amplify';
 import awsconfig from './aws-exports';
 import CreateOrderPage from './pages/CreateOrderPage/CreateOrderPage';
 import AddNewCustomer from './pages/AddNewCustomer/AddNewCustomer';
