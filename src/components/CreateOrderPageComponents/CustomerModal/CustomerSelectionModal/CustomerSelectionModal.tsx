@@ -59,6 +59,7 @@ const CustomerSelectionModal: React.FC<CustomerSelectionModalProps> = ({
                 <CustomerDetailSection name={'Anh Hai'} PhoneNumber={'0422909791'}/>
               </div>
                 <Box
+                  className="GoBackButton"
                   sx={{
                     display: 'flex align-center',
                     justifyContent: 'center',

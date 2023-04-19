@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
-import IconButton from '@mui/material/IconButton';
 
-import AddIcon from '@mui/icons-material/Add';
 import { Link } from 'react-router-dom';
-import DoneIcon from '@mui/icons-material/Done';
-import TextField from '@mui/material/TextField';
-import Stack from '@mui/material/Stack';
 import './AddNewCustomer.css';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
@@ -14,14 +9,15 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogActions from '@mui/material/DialogActions';
 import Button from '@mui/material/Button';
-import GoBackIcon from '../../components/GoBackIcon';
+
 import { Typography } from '@mui/material';
 
-type Props = {};
 
-const AddNewCustomer = (props: Props) => {
+
+
+const AddNewCustomer = () => {
     const [open, setOpen] = useState(false);
-
+    
     const handleClickOpen = () => {
       setOpen(true);
     };
@@ -52,7 +48,7 @@ const AddNewCustomer = (props: Props) => {
                 fontSize: '28px',
               }}
             >
-              Chọn Khách Hàng
+              Tạo Khách Hàng
             </Typography>
           </Box>
 
@@ -67,7 +63,7 @@ const AddNewCustomer = (props: Props) => {
                 </DialogContent>
                 <DialogActions>
                 <Link to="/">
-                    <Button onClick={handleClose} color="primary">
+                    <Button color="primary">
                         Quay Lại
                     </Button>
                 </Link>
@@ -197,7 +193,7 @@ const AddNewCustomer = (props: Props) => {
             >
             <Button
               variant="contained"
-              onClick={handleClickOpen}
+
               sx={{
                 backgroundColor: '#D9D9D9', // Change the button color
                 color: '#000000' // Change the text color
