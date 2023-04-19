@@ -1,12 +1,8 @@
-import '../App.css';
 import { Fab} from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import { useNavigate } from 'react-router-dom';
 
-function classNames(...classes: any[]) {
-  return classes.filter(Boolean).join(' ')
-}
-function WelcomePage() {
+function OrderPage() {
   const navigate = useNavigate();
 
   return (
@@ -21,4 +17,4 @@ function WelcomePage() {
   )
 }
 
-export default WelcomePage;
+export default OrderPage;
