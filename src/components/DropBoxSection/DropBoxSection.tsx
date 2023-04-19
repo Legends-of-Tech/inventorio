@@ -1,15 +1,11 @@
-import React from 'react'
 import DropBox from './DropBox'
-import PreviousIcon from './PreviousIcon'
-import './DropBoxSection.css'
 
 
 const DropBoxSection = () => {
   return (
-    <div className="container">
-    <div className="prev-icon"><PreviousIcon/></div>
-    <div className="select-box"><DropBox/></div>
-  </div>
+    <div className="flex justify-center items-center w-100">
+      <DropBox/>
+    </div>
   )
 }
 

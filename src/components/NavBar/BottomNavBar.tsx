@@ -10,7 +10,7 @@ const BottomNavBar = ({className}: Props) => {
   const location = useLocation();
 
   const isRender = () => {
-    const excludedPaths = ['/create-order-page', '/customers-page', '/all-products'];
+    const excludedPaths = ['/create-order-page', '/customers-page'];
 
     if (excludedPaths.includes(location.pathname)) {
       return false;

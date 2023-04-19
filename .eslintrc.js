@@ -3,9 +3,11 @@ module.exports = {
     browser: true,
     es2021: true
   },
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint', 'react'],
   extends: [
     'plugin:react/recommended',
-    'standard-with-typescript'
+    'plugin:@typescript-eslint/recommended',
   ],
   overrides: [
   ],
@@ -13,10 +15,9 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: [
-    'react'
-  ],
+
   rules: {
-    'react/jsx-indent': ['error', 2]
+    'react/jsx-indent': ['error', 4],
+    "react/react-in-jsx-scope": "off"
   }
 }
