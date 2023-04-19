@@ -56,7 +56,8 @@ function WelcomePage() {
             <div className="px-38 py-40 sm:px-0">
               <div className="flex justify-center">
                 <button className='btn btn-primary' onClick={onAddedProduct}>Add Product</button>
-                <button className='btn btn-primary' onClick={() => {DataStore.clear()}}>Clear Products</button>
+                <button className='btn btn-primary' onClick={async () => {await DataStore.clear()}}>Clear Products</button>
+                <button className='btn btn-primary' onClick={async () => {await DataStore.start();}}>Sync Products</button>
                 <Link to="/create-order-page">
                 <Fab variant="extended" size="large" color="primary">
                     <AddIcon sx={{ mr: 1 }} />
