@@ -7,20 +7,47 @@ import { Amplify } from 'aws-amplify';
 import awsconfig from './aws-exports';
 import CreateOrderPage from './pages/OrderPage/CreateOrderPage/CreateOrderPage';
 import AddNewCustomer from './pages/AddNewCustomer/AddNewCustomer';
+import { ReactNode } from 'react';
 
 Amplify.configure(awsconfig);
+
+export type NavItem ={
+    title: string,
+    path: string, 
+    element: ReactNode,
+};
+const navItems: NavItem[] = [
+    {
+        title: 'Order',
+        path: '/orders',
+        element: <OrderPage />
+    },
+    {
+        title: 'Create Order',
+        path: '/orders/create-order-page',
+        element: <CreateOrderPage />
+    },
+    {
+        title: 'Inventory',
+        path: '/inventory',
+        element: <ProductListPage />
+
+    },
+    {
+        title: 'Customer',
+        path: '/Customer',
+        element: <AddNewCustomer />
+    },
+];
 
 function App() {
   return (
       <div className="relative h-screen w-100 overflow-auto">
           <BrowserRouter>
-              <TopNavBar header={"Đơn Hàng"} />
+              <TopNavBar navItems={navItems}/>
               <main className="main mb-auto pt-3" style={{marginTop: '6rem'}}>
                   <Routes>
-                      <Route path="/orders/create-order-page" element={<CreateOrderPage />} />
-                      <Route path="/orders" element={<OrderPage />} />
-                      <Route path="/all-products" element={<ProductListPage />} />
-                      <Route path="/add-new-customer" element={<AddNewCustomer />} />
+                      {navItems.map(navItem => <Route path={navItem.path} element={navItem.element} key={navItem.title} /> )}
                       <Route path="*" element={<Navigate to="/orders" replace />} />
                   </Routes>
               </main>

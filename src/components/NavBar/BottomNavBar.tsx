@@ -3,14 +3,14 @@ import NavItem from "./NavItem/NavItem";
 import { useLocation } from 'react-router-dom';
 
 type Props = {
-    className: string;
+  className: string;
 }
 
-const BottomNavBar = ({className}: Props) => {
+const BottomNavBar = ({ className }: Props) => {
   const location = useLocation();
 
   const isRender = () => {
-    const excludedPaths = ['/create-order-page', '/customers-page'];
+    const excludedPaths = ['/orders/create-order-page', '/customers-page'];
 
     if (excludedPaths.includes(location.pathname)) {
       return false;
@@ -19,11 +19,11 @@ const BottomNavBar = ({className}: Props) => {
     return true;
   };
   return isRender() ? (
-    <div className={`${className} d-flex`}>
-      <NavItem icon={faHouse} size="2x" path="/"/>
-      <NavItem icon={faBoxArchive} size="2x" path='/all-products'/>
-      <NavItem icon={faUser} size="2x"path="/customers-profile"/>
-    </div>
+      <div className={`${className} d-flex`}>
+          <NavItem icon={faHouse} size="2x" path="/" />
+          <NavItem icon={faBoxArchive} size="2x" path='/all-products' />
+          <NavItem icon={faUser} size="2x" path="/customers-profile" />
+      </div>
   ) : null;
 }
 
