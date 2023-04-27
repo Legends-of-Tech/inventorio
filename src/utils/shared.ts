@@ -1,45 +1,32 @@
-export const arePathsMatched = (currentPath: string, path: string) : boolean => {
-    if (currentPath === path) {
-      return true
-    }
-    
-    if (path.endsWith('/') && currentPath === path.slice(0, -1)) {
-      return true
-    }
-    
-    const [pathName, pathQuery] = path.split('?')
-    const [currentPathName, currentPathQuery] = currentPath.split('?')
-    
-    if (pathQuery && !currentPathQuery) {
-      return false
-    }
-    
-    if (pathQuery && currentPathQuery) {
-      const pathParams = new URLSearchParams(pathQuery)
-      const currentPathParams = new URLSearchParams(currentPathQuery)
-      
-      for (const [key, value] of pathParams) {
-        if (currentPathParams.get(key) !== value) {
-          return false
-        }
-      }
-      
-      for (const [key, value] of currentPathParams) {
-        if (pathParams.get(key) !== value) {
-          return false
-        }
-      }
-    }
-    
-    return pathName === currentPathName
-  }
+export const arePathsMatched = (currentPath: string, path: string): boolean => {
+  // Remove the query string if any and the trailing slash.
+  const cleanPath = (inputPath: string) =>
+    inputPath.split('?')[0].replace(/\/$/, '');
+
+  // Extract the pathnames.
+  const currentPathname = cleanPath(currentPath);
+  const pathname = cleanPath(path);
+
+  // Compare the pathnames, considering a single slash and an empty string as equal.
+  return (
+    currentPathname === pathname ||
+    (currentPathname === '' && pathname === '/') ||
+    (currentPathname === '/' && pathname === '')
+  );
+};
 
 
-//   export const arePathsMatched = (currentPath: string, path: string): boolean => {
-//     // Remove the query string if any and the trailing slash.
-//     const cleanPath = (inputPath: string) =>
-//       inputPath.split('?')[0].replace(/\/$/, '');
+// test.each([
+//   ['/a', '/a', true],
+//   ['/a', '/a/', true],
+//   ['/a/b', '/a/b', true],
+//   ['/a/b', '/a/b/', true],
+//   ['/inventory?category=aodai', '/invetory', true]
+// ])('arePathMatched should return true when given two matched paths', (currentPath: string, path: string, expected: boolean) => {
+//   const result = arePathsMatched(currentPath, path)
   
-//     // Compare the cleaned paths.
-//     return cleanPath(currentPath) === cleanPath(path);
-//   };
+//   expect(result).toBe(expected)
+// })
+
+// test.each([
+//   ['/a', '/b', false],

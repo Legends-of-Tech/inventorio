@@ -8,7 +8,7 @@ test.each([
   ['/a', '/a/', true],
   ['/a/b', '/a/b', true],
   ['/a/b', '/a/b/', true],
-  // ['/inventory?category=aodai', '/invetory', true]
+  ['/a?b', '/a', true]
 ])('arePathMatched should return true when given two matched paths', (currentPath: string, path: string, expected: boolean) => {
   const result = arePathsMatched(currentPath, path)
   

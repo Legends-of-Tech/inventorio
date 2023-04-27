@@ -8,8 +8,8 @@ interface SelectCustomerFabProps {
 
 const SelectCustomerFab: React.FC<SelectCustomerFabProps> = ({ onClick }) => {
   return (
-    <section className="fixed top-40 left-0 right-0 z-10 flex justify-center mt-5">
-      <Fab
+      <section className="fixed top-40 left-0 right-0 z-10 flex justify-center mt-5">
+          <Fab
         onClick={onClick}
         variant="extended"
         size="large"
@@ -19,8 +19,8 @@ const SelectCustomerFab: React.FC<SelectCustomerFabProps> = ({ onClick }) => {
           border: '1.5px solid #90A4AE',
         }}
       >
-        <AccountCircleIcon sx={{ mr: 1, color: '#90A4AE', fontSize: '2rem' }} />
-        <span
+              <AccountCircleIcon sx={{ mr: 1, color: '#90A4AE', fontSize: '2rem' }} />
+              <span
           style={{
             fontSize: '1.2rem',
             fontFamily: 'Arial, sans-serif',
@@ -28,10 +28,10 @@ const SelectCustomerFab: React.FC<SelectCustomerFabProps> = ({ onClick }) => {
             textTransform: 'capitalize',
           }}
         >
-          Chọn Khách Hàng
-        </span>
-      </Fab>
-    </section>
+                  Chọn Khách Hàng
+              </span>
+          </Fab>
+      </section>
   );
 };
 

@@ -10,9 +10,9 @@ type Props = {
 const TagChipItem = ({path, label}: Props) => {
     const navigate = useNavigate();
   return (
-    <div  onClick={() => { navigate(path)}}>
-        <Chip label={label}/>
-    </div>
+      <div  onClick={() => { navigate(path)}}>
+          <Chip label={label}/>
+      </div>
   )
 }
 

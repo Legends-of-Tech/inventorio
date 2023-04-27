@@ -8,9 +8,9 @@ type Props = {
 
 const TagChip = ({className}: Props) => {
   return (
-    <div className={`${className} d-flex`}>
-        <TagChipItem label="Trơn" path='/'/>
-    </div>
+      <div className={`${className} d-flex`}>
+          <TagChipItem label="Trơn" path='/'/>
+      </div>
   )
 }
 
