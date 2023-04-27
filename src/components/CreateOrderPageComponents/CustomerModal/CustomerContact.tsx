@@ -3,12 +3,12 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { Typography } from '@mui/material';
 
 
-type CustomerDetailSectionProps = {
+type CustomerContactProps = {
   name: string;
   PhoneNumber: string;
 };
 
-const CustomerDetailSection: React.FC<CustomerDetailSectionProps> = ({ name, PhoneNumber }) => {
+const CustomerContact: React.FC<CustomerContactProps> = ({ name, PhoneNumber }) => {
   return (
       <div style={{ display: 'flex', alignItems: 'center', border: '2px solid', borderColor: '#E0E0E0', width: '100%',height: '100%', minHeight: '60px', }}>
           <AccountCircleIcon style={{ fontSize: '52px', color: '#90A4AE', marginLeft: '18px' }} />
@@ -24,6 +24,6 @@ const CustomerDetailSection: React.FC<CustomerDetailSectionProps> = ({ name, Pho
   );
 };
 
-export default CustomerDetailSection;
+export default CustomerContact;
 
 

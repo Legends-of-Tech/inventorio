@@ -1,6 +1,5 @@
 import { Disclosure} from '@headlessui/react'
 import { Link, useLocation } from 'react-router-dom'
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { NavItem } from '../../App';
 import { arePathsMatched } from '../../utils/shared';
 
@@ -8,12 +7,19 @@ type Props = {
   navItems: NavItem[],
 }
 
+export const getHeaderTitle = (navItems: NavItem[] , currentPath: string): string =>{
+  const x = navItems.filter(navItem => arePathsMatched(currentPath, navItem.path));
+  if (x.length !== 1) return "Inventorio"
+  return x[0].title;
+
+}
+
 
 const TopNavBar = ( {navItems}: Props ) => {
   const location = useLocation();
   const currentPath = location.pathname;
   
-  const x = navItems.filter(navItem => arePathsMatched(currentPath, navItem.path));
+  
   console.log('NavItems: ', navItems);
   return (
       <Disclosure as="nav" className="bg-blue-300 fixed inset-y-0 bottom-0 h-24 right-0 vw-100 z-50">

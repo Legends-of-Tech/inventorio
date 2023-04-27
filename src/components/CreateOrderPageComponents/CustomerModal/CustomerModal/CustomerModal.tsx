@@ -1,29 +1,28 @@
 import React from 'react';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
-
 import AlphabetSortSection from '../AlphabetSortSection';
-import CustomerDetailSection from '../CustomerDetailSection';
+import CustomerDetailSection from '../CustomerContact';
 import AddNewCustomer from '../../../../pages/AddNewCustomer/AddNewCustomer';
-import './CustomerSelectionModal.css'
+import './CustomerModal.css'
 import HeaderCustomerListModal from '../HeaderCustomerModal';
 import Button from '@mui/material/Button';
 
 
 
 
-interface CustomerSelectionModalProps {
+interface CustomerModalProps {
   open: boolean;
   onClose: () => void;
-  showAddCustomer: boolean;
+  showAddCustomerForm: boolean;
   handleCustomerSelection: () => void;
   handleAddCustomer: () => void;
 }
 
-const CustomerSelectionModal: React.FC<CustomerSelectionModalProps> = ({
+const CustomerModal: React.FC<CustomerModalProps> = ({
   open,
   onClose,
-  showAddCustomer,
+  showAddCustomerForm,
   handleCustomerSelection,
   handleAddCustomer,
 }) => {
@@ -31,8 +30,7 @@ const CustomerSelectionModal: React.FC<CustomerSelectionModalProps> = ({
       <Modal
       open={open}
       onClose={onClose}
-      aria-labelledby="modal-modal-title"
-      aria-describedby="modal-modal-description"
+      aria-labelledby="CustomerModal"
     >
           <Box
         sx={{
@@ -51,7 +49,7 @@ const CustomerSelectionModal: React.FC<CustomerSelectionModalProps> = ({
         }}
       >
               <div className="CustomersModal">
-                  {!showAddCustomer && (
+                  {!showAddCustomerForm && (
                   <>
                       <HeaderCustomerListModal onAddCustomer={handleAddCustomer} />
                       <div className="CustomerInfo" onClick={handleCustomerSelection}>
@@ -72,7 +70,7 @@ const CustomerSelectionModal: React.FC<CustomerSelectionModalProps> = ({
                       </Box>
                   </>
           )}
-                  {showAddCustomer && <AddNewCustomer />}
+                  {showAddCustomerForm && <AddNewCustomer />}
               </div>
           </Box>
       </Modal>
@@ -80,6 +78,6 @@ const CustomerSelectionModal: React.FC<CustomerSelectionModalProps> = ({
   );
 };
 
-export default CustomerSelectionModal;
+export default CustomerModal;
 
 

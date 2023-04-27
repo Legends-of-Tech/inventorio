@@ -13,7 +13,8 @@ function ProductsListPage() {
           </div>
           <TagChipItem label="Áo Dài Có Họa Tiết" path='/'/>
         </div> */}
-            <ProductList header={'Tất Cả Sản Phẩm'}/>
+            {/* header={'Tất Cả Sản Phẩm'} */}
+            <ProductList /> 
             <Outlet />
         </>
     )

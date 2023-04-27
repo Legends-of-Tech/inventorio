@@ -4,7 +4,7 @@ import { ShoppingCartRounded } from '@mui/icons-material';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import AddProductSection from '../../../components/CreateOrderPageComponents/AddProductModal/AddProductSection';
 import SelectCustomerFab from '../../../components/CreateOrderPageComponents/CustomerModal/SelectCustomerFab';
-import CustomerSelectionModal from '../../../components/CreateOrderPageComponents/CustomerModal/CustomerSelectionModal/CustomerSelectionModal';
+import CustomerModal from '../../../components/CreateOrderPageComponents/CustomerModal/CustomerModal/CustomerModal';
 
 
 
@@ -39,10 +39,10 @@ const CreateOrderPage = () => {
 
 
               {/* This a modal for selecting the customer for the order and also has a add new customer form   */}
-              <CustomerSelectionModal
+              <CustomerModal
         open={open}
         onClose={handleClose}
-        showAddCustomer={showAddCustomer}
+        showAddCustomerForm={showAddCustomer}
         handleCustomerSelection={handleCustomerSelection}
         handleAddCustomer={handleAddCustomer}
         />
