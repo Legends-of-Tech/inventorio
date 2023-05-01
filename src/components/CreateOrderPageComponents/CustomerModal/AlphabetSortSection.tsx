@@ -9,7 +9,7 @@ type AlphabetSortSectionProps = {
 const AlphabetSortSection: React.FC<AlphabetSortSectionProps> = ({ label }) => {
 
   return (
-    <Box
+      <Box
       sx={{
         display: 'flex',
         justifyContent: 'flex-start',
@@ -20,10 +20,10 @@ const AlphabetSortSection: React.FC<AlphabetSortSectionProps> = ({ label }) => {
         minHeight: '30px',
       }}
     >
-      <Typography variant="h6" component="div" sx={{ marginLeft: '16px' }}>
-        {label}
-      </Typography>
-    </Box>
+          <Typography variant="h6" component="div" sx={{ marginLeft: '16px' }}>
+              {label}
+          </Typography>
+      </Box>
   );
 };
 

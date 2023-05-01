@@ -4,30 +4,27 @@ import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import AddIcon from '@mui/icons-material/Add';
-import {Link} from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import AddNewCustomer from '../../../pages/AddNewCustomer/AddNewCustomer';
-import GoBackIcon from '../../GoBackIcon';
 
 
 
 
 
 
-const style = {
-  position: 'absolute' as 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
-};
+
+// const style = {
+//   position: 'absolute' as const,
+//   top: '50%',
+//   left: '50%',
+//   transform: 'translate(-50%, -50%)',
+//   width: 400,
+//   bgcolor: 'background.paper',
+//   border: '2px solid #000',
+//   boxShadow: 24,
+//   p: 4,
+// };
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -75,12 +72,12 @@ interface HeaderCustomerListModalProps {
 
 const HeaderCustomerListModal: React.FC<HeaderCustomerListModalProps> = ({ onAddCustomer }) => {
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
+  // const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
     return (
-      <div className="min-h-full">
-          <Box
+        <div className="min-h-full">
+            <Box
             sx={{
               display: 'flex',
               alignItems: 'center',
@@ -93,18 +90,18 @@ const HeaderCustomerListModal: React.FC<HeaderCustomerListModalProps> = ({ onAdd
               
             }}
           >
-            <Typography
+                <Typography
               variant="h6"
               sx={{
                 fontWeight: 'bold', // Make the text bold
                 fontSize: '28px',
               }}
             >
-              Chọn Khách Hàng
-            </Typography>
-          </Box>
-        <header className="py-3 px-12 w-full max-w-screen-lg flex items-center justify-center">
-        <Box
+                    Chọn Khách Hàng
+                </Typography>
+            </Box>
+            <header className="py-3 px-12 w-full max-w-screen-lg flex items-center justify-center">
+                <Box
       sx={{
         display: 'flex',
         justifyContent: 'space-between',
@@ -114,7 +111,7 @@ const HeaderCustomerListModal: React.FC<HeaderCustomerListModalProps> = ({ onAdd
       }}
     >
       
-      <Box
+                    <Box
         sx={{
           display: 'flex',
           justifyContent: 'flex-start',
@@ -124,17 +121,17 @@ const HeaderCustomerListModal: React.FC<HeaderCustomerListModalProps> = ({ onAdd
           marginRight: '18px', // Add some margin to the right
         }}
       >
-        <Search>
-          <SearchIconWrapper>
-            <SearchIcon />
-          </SearchIconWrapper>
-          <StyledInputBase
+                        <Search>
+                            <SearchIconWrapper>
+                                <SearchIcon />
+                            </SearchIconWrapper>
+                            <StyledInputBase
             placeholder="Tìm Kiếm"
             inputProps={{ 'aria-label': 'search' }}
           />
-        </Search>
-      </Box>
-      <IconButton
+                        </Search>
+                    </Box>
+                    <IconButton
         onClick={onAddCustomer}
         sx={{
           position: 'absolute',
@@ -142,15 +139,15 @@ const HeaderCustomerListModal: React.FC<HeaderCustomerListModalProps> = ({ onAdd
 
         }}
       >
-        <AddIcon sx={{ fontSize: '2.5rem' }} />
-      </IconButton>
-      <Modal
+                        <AddIcon sx={{ fontSize: '2.5rem' }} />
+                    </IconButton>
+                    <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box
+                        <Box
             sx={{
               marginTop: '-20px', 
               position: 'absolute',
@@ -166,12 +163,12 @@ const HeaderCustomerListModal: React.FC<HeaderCustomerListModalProps> = ({ onAdd
               overflowY: 'auto',
           }}
           >
-        </Box>
-      </Modal>
-    </Box>
+                        </Box>
+                    </Modal>
+                </Box>
     
-        </header>
-      </div>
+            </header>
+        </div>
     );
 }
 

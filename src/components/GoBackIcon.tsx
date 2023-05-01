@@ -2,9 +2,7 @@ import React from 'react';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 
-type Props = {}
-
-const GoBackIcon = (props: Props) => {
+const GoBackIcon = () => {
     return (
         <ArrowBackIcon
           sx={{ fontSize: '1.8rem' }}

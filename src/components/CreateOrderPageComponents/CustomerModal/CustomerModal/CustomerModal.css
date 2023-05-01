@@ -1,0 +1,11 @@
+.CustomersModal {
+  border-radius: 4px;
+  position: fixed;
+  margin-top: 8px;
+  top: -6px;
+  /* Replace with the height of your navbar */
+  left: 0;
+  right: 0;
+  z-index: 10;
+  /* Add other styles for your header */
+}

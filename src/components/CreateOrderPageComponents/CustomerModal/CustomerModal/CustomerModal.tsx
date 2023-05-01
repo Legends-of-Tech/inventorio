@@ -1,40 +1,38 @@
 import React from 'react';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
-
 import AlphabetSortSection from '../AlphabetSortSection';
-import CustomerDetailSection from '../CustomerDetailSection';
+import CustomerDetailSection from '../CustomerContact';
 import AddNewCustomer from '../../../../pages/AddNewCustomer/AddNewCustomer';
-import './CustomerSelectionModal.css'
+import './CustomerModal.css'
 import HeaderCustomerListModal from '../HeaderCustomerModal';
 import Button from '@mui/material/Button';
-import { Link } from 'react-router-dom';
 
 
 
-interface CustomerSelectionModalProps {
+
+interface CustomerModalProps {
   open: boolean;
   onClose: () => void;
-  showAddCustomer: boolean;
+  showAddCustomerForm: boolean;
   handleCustomerSelection: () => void;
   handleAddCustomer: () => void;
 }
 
-const CustomerSelectionModal: React.FC<CustomerSelectionModalProps> = ({
+const CustomerModal: React.FC<CustomerModalProps> = ({
   open,
   onClose,
-  showAddCustomer,
+  showAddCustomerForm,
   handleCustomerSelection,
   handleAddCustomer,
 }) => {
   return (
-    <Modal
+      <Modal
       open={open}
       onClose={onClose}
-      aria-labelledby="modal-modal-title"
-      aria-describedby="modal-modal-description"
+      aria-labelledby="CustomerModal"
     >
-      <Box
+          <Box
         sx={{
           marginTop: '-20px',
           position: 'absolute',
@@ -50,15 +48,15 @@ const CustomerSelectionModal: React.FC<CustomerSelectionModalProps> = ({
           overflowY: 'auto',
         }}
       >
-        <div className="CustomersModal">
-          {!showAddCustomer && (
-            <>
-              <HeaderCustomerListModal onAddCustomer={handleAddCustomer} />
-              <div className="CustomerInfo" onClick={handleCustomerSelection}>
-                <AlphabetSortSection label={'A'} />
-                <CustomerDetailSection name={'Anh Hai'} PhoneNumber={'0422909791'}/>
-              </div>
-                <Box
+              <div className="CustomersModal">
+                  {!showAddCustomerForm && (
+                  <>
+                      <HeaderCustomerListModal onAddCustomer={handleAddCustomer} />
+                      <div className="CustomerInfo" onClick={handleCustomerSelection}>
+                          <AlphabetSortSection label={'A'} />
+                          <CustomerDetailSection name={'Anh Hai'} PhoneNumber={'0422909791'}/>
+                      </div>
+                      <Box
                   className="GoBackButton"
                   sx={{
                     display: 'flex align-center',
@@ -68,18 +66,18 @@ const CustomerSelectionModal: React.FC<CustomerSelectionModalProps> = ({
                     position: 'sticky', // Added position: sticky
                     bottom: 0, // Added bottom: 0
                   }}>
-                  <Button variant="contained"onClick={onClose}>Quay Lại</Button>
-                </Box>
-            </>
+                          <Button variant="contained"onClick={onClose}>Quay Lại</Button>
+                      </Box>
+                  </>
           )}
-          {showAddCustomer && <AddNewCustomer />}
-        </div>
-      </Box>
-    </Modal>
+                  {showAddCustomerForm && <AddNewCustomer />}
+              </div>
+          </Box>
+      </Modal>
     
   );
 };
 
-export default CustomerSelectionModal;
+export default CustomerModal;
 
 

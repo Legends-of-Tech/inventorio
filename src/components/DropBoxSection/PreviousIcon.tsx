@@ -8,7 +8,7 @@ const PreviousIcon: React.FC = () => {
   };
 
   return (
-    <ArrowBackIcon
+      <ArrowBackIcon
       onClick={goBack}
       aria-label="Previous Page"
       role="button"
