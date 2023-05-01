@@ -27,7 +27,7 @@ const TopNavBar = ( {navItems}: Props ) => {
               <div className="relative flex h-16 items-center justify-between">
 
                   <h1 className="flex-1 text-3xl font-bold tracking-tight text-gray-900 text-center mt-20">
-                      {}
+                      {getHeaderTitle(navItems, currentPath)}
                   </h1>
                   <Link to='/'>
                       <div className="flex flex-shrink-0 items-center" >

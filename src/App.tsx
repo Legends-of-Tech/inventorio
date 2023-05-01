@@ -18,12 +18,12 @@ export type NavItem ={
 };
 const navItems: NavItem[] = [
     {
-        title: 'Order',
+        title: 'Đơn Hàng',
         path: '/orders',
         element: <OrderPage />
     },
     {
-        title: 'Create Order',
+        title: 'Tạo Đơn Hàng',
         path: '/orders/create-order-page',
         element: <CreateOrderPage />
     },

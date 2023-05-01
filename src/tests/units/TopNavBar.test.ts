@@ -12,7 +12,7 @@ test('getHeaderTitle should return the correct title when there is a single matc
     const navItems: NavItem[] = [
         {
             title: 'Order',
-            path: '/orders',
+            path: '/order',
             element: React.createElement(MockComponent)
         },
         {
@@ -48,24 +48,8 @@ test('getHeaderTitle should return "Inventorio" when there are multiple matching
             element: React.createElement(MockComponent)
         },
         {
-            title: 'Order',
-            path: '/ohrders',
-            element: React.createElement(MockComponent)
-        },
-        {
-            title: 'Create Order',
-            path: '/orders/create-order-page',
-            element: React.createElement(MockComponent)
-        },
-        {
-            title: 'Inventory',
-            path: '/inventory',
-            element: React.createElement(MockComponent)
-    
-        },
-        {
-            title: 'Customer',
-            path: '/Customer',
+            title: 'Orders',
+            path: '/orders/',
             element: React.createElement(MockComponent)
         },
     ];
